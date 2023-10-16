@@ -1,0 +1,110 @@
+<html><head>
+	<title>Data Structures in Python</title>
+	<link rel="stylesheet" href="stylepython.css">
+	<script src="scriptpython.js"></script>
+	</head>
+	<body>
+		<header>
+		<a href = "home.html" > <img src="logo.jpg" alt="Logo" class="logo"  width="125" height="40"></a>
+		<div class="search-container">
+			<input type="text" id="search-input" name="q" placeholder="Search..."onkeypress="handleKeyPress(event)">
+			<button type="button"  onclick="searchSiteOrGoogle()"><span class="skew-fix">Search</span></button>
+		</div>
+	</header>
+		
+	<nav>
+		<ul class="menu cf">
+			<li><a href="home.html">Home</a></li>
+			<li><a href="arrayp.html">Arrays</a></li>
+			<li><a href="stringsp.html">Strings</a></li>
+			<li><a href="functionsp.html">Functions</a></li>
+			<li><a href="filehandlingp.html">File Handling</a></li>
+			<li><a href="datastructurep.html">Data Structures</a></li>
+
+			<li><a href="operatorsp.html">Operators in Python</a></li>
+		</ul>
+	</nav>
+	
+	<main>
+		<div class="left-content">
+			<h2>Categories</h2>
+			<ul>
+				<li><a href="introductionp.html">Introduction</a></li>
+				<li><a href="Datatypesp.html">Data Types</a></li>
+				<li><a href="listsp.html">Lists</a></li>
+				<li><a href="arrayp.html">Array</a></li>
+				<li><a href="stringsp.html">Strings</a></li>
+				<li><a href="userinputp.html">User Input in Python</a></li>
+				<li><a href="tuplesp.html">Tuples</a></li>
+				<li><a href="setsp.html">Sets</a></li>
+				<li><a href="dictionariesp.html">Dictionaries</a></li>
+				<li><a href="ifelsep.html">If-Else Statements in Python</a></li>
+				<li><a href="forp.html">For Loops in Python</a></li>
+				<li><a href="whilep.html">While Loops in Python</a></li>
+			</ul>
+		</div>
+	<div class="right-content">
+        <h1>Data Structures in Python</h1><br><br>
+    
+    <h2>Lists:</h2>
+    <p>
+        Lists are ordered collections of items, enclosed in square brackets ([]).
+        They can store heterogeneous data types (e.g., integers, strings, objects) and allow duplicates.
+        Lists are mutable, meaning you can add, remove, or modify elements after creation.
+    </p>
+    <p>Example:</p><br><br>
+    <ul class="pre"><pre>
+my_list = [1, 2, "three", True]
+    </pre></ul><br><br>
+    
+    <h2>Tuples:</h2>
+    <p>
+        Tuples are similar to lists but are immutable, meaning they cannot be modified after creation.
+        They are defined using parentheses ().
+        Tuples are often used when you want to store related pieces of data that should not be changed.
+    </p>
+    <p>Example:</p><br><br>
+    <ul class="pre"><pre>
+my_tuple = (1, 2, "three", True)
+    </pre></ul><br><br>
+    
+    <h2>Sets:</h2>
+    <p>
+        Sets are unordered collections of unique elements, enclosed in curly braces ({}) or created using the <code>set()</code> function.
+        They are useful when you need to store and operate on unique values.
+        Sets do not support indexing or slicing since they are unordered.
+    </p>
+    <p>Example:</p><br><br>
+    <ul class="pre"><pre>
+my_set = {1, 2, 3, 4}
+    </pre></ul><br><br>
+    
+    <h2>Dictionaries:</h2><br><br>
+    <p>
+        Dictionaries are key-value pairs enclosed in curly braces ({}).
+        They are mutable and allow you to store and retrieve values based on a specific key.
+        Each key in a dictionary must be unique, but values can be duplicated.
+    </p>
+    <p>Example:</p><br><br>
+    <ul class="pre"><pre>
+my_dict = {"name": "John", "age": 25, "city": "New York"}
+    </pre></ul><br><br>
+    
+    <h2>Strings:</h2><br><br>
+    <p>
+        While not a data structure per se, strings are commonly used to store sequences of characters.
+        They are immutable, meaning they cannot be modified after creation.
+        Python provides many built-in string manipulation methods.
+    </p>
+    <p>Example:</p><br><br>
+    <ul class="pre"><pre>
+my_string = "Hello, World!"
+    </pre></ul><br><br>
+    
+    <p>These are some of the fundamental data structures in Python. Each has its own characteristics, advantages, and use cases.
+        Python also provides additional data structures through modules and libraries, such as arrays, stacks, queues, and more.
+        These additional data structures can be used depending on the specific requirements of your program.
+    </p>
+    </div>
+</main>
+</body></html>

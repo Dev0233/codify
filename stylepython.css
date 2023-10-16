@@ -1,0 +1,436 @@
+
+			body{
+				background-color: #000;
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+			/* Style for the header */
+			header {
+				background-color: transparent; /* Dark blue color with 50% opacity */
+				  color: rgb(8, 2, 2);
+				  padding: 5px;
+				  text-align: center;
+				  position: relative;
+	
+			}
+			h1 {
+				font-size: 48px;
+				margin: 0;
+			}
+			.logo {
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				padding: 1px;
+			}
+			/* Style for the navigation bar */
+			/* Menu Dropdown */
+			.cf:before,
+			.cf:after {
+				content: " ";
+				display: table;
+			}
+	
+			.cf:after {
+				clear: both;
+			}
+	
+			.cf {
+				zoom: 1;
+			}
+	
+			.menu,
+			.submenu {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			}
+	
+			.menu {   
+			margin: 50px auto;
+			width: 800px;   
+			width: -moz-fit-content;
+			width: -webkit-fit-content;
+			width: fit-content; 
+			}
+	
+			.menu > li {
+			background: #000;
+			float: left;
+			position: relative;
+			transform: skewX(25deg);
+			}
+	
+			.menu a {
+			display: block;
+			color: #fff;
+			text-transform: uppercase;
+			text-decoration: none;
+			font-family: Arial, Helvetica;
+			font-size: 15px;
+			}  
+	
+			.menu li:hover {
+			background: #0e950e;
+			}  
+	
+			.menu > li > a {
+			transform: skewX(-25deg);
+			padding: 1em 2em;
+			}
+	
+			/* Dropdown */
+			.submenu {
+			position: absolute;
+			width: 200px;
+			left: 50%; margin-left: -100px;
+			transform: skewX(-25deg);
+			transform-origin: left top;
+			}
+	
+			.submenu li {
+			background-color: #0e950e;
+			position: relative;
+			overflow: hidden;  
+			}      
+	
+			.submenu > li > a {
+			padding: 1em 2em;   
+			}
+	
+			.submenu > li::after {
+			content: '';
+			position: absolute;
+			top: -125%;
+			height: 100%;
+			width: 100%;   
+			box-shadow: 0 0 50px rgba(0, 0, 0, .9);   
+			}  
+	
+			.submenu > li:nth-child(odd){
+			transform: skewX(-25deg) translateX(0);
+			}
+	
+			.submenu > li:nth-child(odd) > a {
+			transform: skewX(25deg);
+			}
+	
+			.submenu > li:nth-child(odd)::after {
+			right: -50%;
+			transform: skewX(-25deg) rotate(3deg);
+			}    
+	
+			.submenu > li:nth-child(even){
+			transform: skewX(25deg) translateX(0);
+			}
+	
+			.submenu > li:nth-child(even) > a {
+			transform: skewX(-25deg);
+			}
+	
+			.submenu > li:nth-child(even)::after {
+			left: -50%;
+			transform: skewX(25deg) rotate(3deg);
+			}
+	
+			/* Show dropdown */
+			.submenu,
+			.submenu li {
+			opacity: 0;
+			visibility: hidden;   
+			}
+	
+			.submenu li {
+			transition: .2s ease transform;
+			}
+	
+			.menu > li:hover .submenu,
+			.menu > li:hover .submenu li {
+			opacity: 1;
+			visibility: visible;
+			}  
+	
+			.menu > li:hover .submenu li:nth-child(even){
+			transform: skewX(25deg) translateX(15px);   
+			}
+	
+			.menu > li:hover .submenu li:nth-child(odd){
+			transform: skewX(-25deg) translateX(-15px);   
+			}
+	
+			
+			/* Style for the main content */
+			main {
+				display: flex;
+				flex-direction: row;
+				padding: 20px;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+			.left-content {
+				flex-basis: 20%;
+				background-color: transparent;
+				padding: 20px;
+			}
+			.left-content h2 {
+				font-size: 24px;
+				margin-top: 0;
+			}
+			.left-content ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			.left-content li {
+				margin: 10px 10px;
+				padding: 0px px;
+			}
+			.left-content a {
+				color: white;
+				text-decoration: none;
+				font-size: 18px;
+			}
+			.right-content {
+				flex-basis: 100%;
+				background-color: transparent;
+				padding: 20px;
+			}
+			h1 {
+				font-size: 24px;
+				font-style: Arial;
+				color: white;
+				margin-top: 0;
+                text-decoration: underline;
+			}
+			h2 {
+				font-size: 24px;
+				font-style: Arial;
+				color: white;
+				margin-top: 0;
+                text-decoration: underline;
+			}
+			h3 { 
+				font-size: 24px;
+				font-style: Arial;
+				color: white;
+				margin-top: 0;
+                text-decoration: underline;
+			}
+	
+			h4 { 
+				font-size: 24px;
+				font-style: Arial;
+				color: white;
+				margin-top: 0;
+                text-decoration: underline;
+			}
+            h5 { 
+				font-size: 16px;
+				font-style: Arial;
+				color: white;
+				margin-top: 0;
+                text-decoration: underline;
+			}
+	
+	
+			p {
+				font-size: 20px;
+				font-style: Arial;
+				color: #fff;
+				line-height: 1.5;
+				margin: 0;
+				max-width: auto;
+			}
+            
+			button {
+				background-color: #131212;
+				color: white;
+				font-family: Arial, Helvetica;
+				font-size: 15px;
+				padding: 7px 15px;
+				border: none;
+				border-radius: 5px;
+				margin-top: 10px;
+				cursor: pointer;
+				display: inline-block;
+				transform: skewX(25deg) translateX(15px);
+				
+					}
+	
+			button:hover {
+				background-color: #0e950e;
+				color: black;
+		
+			}
+			.search-container {
+				display: flex;
+				align-items: left;
+				background-color: transparent;
+				padding: 0px 90px;
+			}
+			.search-container input[type="text"] {
+				  width: 800px;
+				  padding: 10px 10px;
+				margin: 8px 87px;
+				box-sizing: border-box;
+				border: 2px solid white;
+				border-radius: 4px;
+				background-color: transparent;
+				font-size: 16px;
+			}
+	
+			.search-container-button {
+				background-color: black;
+				color: #fff;
+				text-transform: uppercase;
+				text-decoration: none;
+				font-family: Arial, Helvetica;
+				font-size: 15px;
+				transform: skewX(-25deg);
+				padding: 10px 20px;
+			}
+	
+			.search-container-button:hover {
+				background-color: #0e950e; /* Change to the desired color */
+			}
+		
+			#courses-section {
+				background-color: transparent;
+				padding: 80px 20px;
+				text-align: center;
+			}
+	
+			#courses-section h2 {
+				color: white;
+				font-size: 30px;
+				font-style: Arial;
+				margin-bottom: 20px;
+			}
+	
+			/* course Section Styles */
+			.course {
+				display: inline-block;
+				width: 130px; /* Increased width to provide space for the content */
+				padding: 20px;
+				margin: 20px;
+				text-align: center; /* Center-align the content */
+				background-color: transparent;
+				border-radius: 5px;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			}
+	
+			.course img {
+				max-width: 100%;
+				margin-bottom: 10px;
+				border-radius: 15px;
+				box-shadow: 0 7px 15px rgb(14, 161, 60);
+				background-color: transparent;
+				
+			}
+	
+			.course h3 {
+				font-size: 20px;
+				margin-bottom: 10px;
+				color: white; /* Set the color for course title */
+			}
+	
+			.course p {
+				font-size: 16px;
+				color: white; /* Set the color for course description */
+			}
+	
+		/* Testimonial Section Styles */
+	
+			#testimonial-section {
+			padding: 100px 20px;
+			text-align: center;
+			}
+	
+			#testimonial-section h2 {
+			color: white;
+			font-size: 30px;
+			margin-bottom: 20px;
+			}
+	
+			.testimonial {
+			display: inline-block;
+			width: 290px;
+			padding: 20px;
+			margin: 20px;
+			text-align: left;
+			background-color: transparent;
+			border-radius: 5px;
+			box-shadow: 0 2px 5px rgb(246, 239, 239);
+			}
+	
+			.testimonial img {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			margin-bottom: 10px;
+			}
+	
+			.testimonial blockquote {
+			font-size: 16px;
+			color: white;
+			margin-bottom: 10px;
+			}
+	
+			.testimonial cite {
+			color:white;
+			font-size: 14px;
+			}
+			.pic{
+				padding: 40;
+				text-align: center;
+			}
+			.center{
+				display: inline-block;
+				width: 1040px;
+				padding: 80px;
+				margin: 20px;
+				text-align: center;
+				background-color: transparent;
+				border-radius: 5px;
+			}
+			.pre{
+				background-color: transparent;
+				color: white;
+				display: inline-block;
+				width: 800px;
+				padding: 20px;
+				margin: 20px;
+				border-radius: 15px;
+				font-style: Arial;
+				background-color: transparent;
+				box-shadow: 0 4px 10px rgb(21, 120, 49);
+			}
+			.left-content ul li a:hover {
+			color: green;
+			}
+			.skew-fix{
+				display: inline-block;
+				transform: skew(-25deg);
+			}
+			.search-container input[type="text"] {
+				color:white;
+			}
+			#scroll-to-top {
+				display: none;
+				position: fixed;
+				bottom: 20px;
+				right: 20px;
+				width: 50px;
+				height: 50px;
+				background-color: transparent;
+				color: #208930;
+				text-align: center;
+				border-radius: 50%;
+				font-size: 24px;
+				line-height: 50px;
+				cursor: pointer;
+			}
+	
+			#scroll-to-top:hover {
+				background-color: rgb(238, 241, 238);
+			}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>C++ Inheritance</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+	<a href="home.html">
+	<img src="logo.jpg" alt="Logo" class="logo" width="125" height="40">
+	</a>
+	<div class="search-container">
+		<form action="/search">
+			<label for="search-input"> </label>
+			<input type="text" id="search-input" name="q" placeholder="Search..." onkeypress="handleKeyPress(event)">
+			<button type="button" class="search-button" onclick="searchSiteOrGoogle()"><span class="skew-fix">Search</span></button>
+		</form>
+	</div>
+</header>
+	
+<nav>
+	<ul class="menu cf">
+		<li><a href="home.html">Home</a></li>
+		<li><a href="c++ array.html">Arrays</a></li>
+		<li><a href="home.html">Strings</a></li>
+		<li><a href="c++ functions.html">Functions</a></li>
+		<li><a href="home.html">File Handling</a></li>
+		<li><a href="home.html">Data Structures</a></li>
+		<li><a href="pointers.html">Pointers</a></li>
+		<li><a href="home.html">C++ Programs</a></li>
+	</ul>
+</nav>
+
+<main>
+	<div class="left-content">
+		<h2>Categories</h2>
+		<ul>
+        <li><a href="c++ page.html">C++ Tutorial</a></li>
+        <li><a href="control statement.html">C++ Control Statement</a></li>
+        <li><a href="c++ functions.html">C++ Functions</a></li>
+        <li><a href="c++ array.html">C++ Arrays</a></li>
+        <li><a href="pointers.html">C++ Pointers</a></li>
+        <li><a href="object class.html">C++ Object Class</a></li>
+        <li><a href="c++ inheritance.html">C++ Inheritance</a></li>
+        <li><a href="c++ polymorphism.html">C++ Polymorphism</a></li>
+        <li><a href="#">C++ Abstraction</a></li>
+        <li><a href="#">C++ Strings</a></li>
+        <li><a href="#">Signal Handling</a></li>
+        <li><a href="#">C++ Exception Handling</a></li>
+        <li><a href="#">C++ Templates</a></li>
+        <li><a href="#">C++ Standard Template Library (STL)</a></li>
+        <li><a href="#">C++ Multi-Threading</a></li>
+        <li><a href="#">C++ File Handling</a></li>
+        <li><a href="#">C++ Graphics</a></li>
+        <li><a href="#">C++ Networking</a></li>
+        <li><a href="#">C++ Data Structures</a></li>
+        <li><a href="#">C++ Templates</a></li>
+        <li><a href="#">C++ File Handling</a></li>
+        <li><a href="#">C++ Standard Template Library (STL)</a></li>
+        <li><a href="#">C++ Smart Pointers</a></li>
+        <li><a href="#">C++ Multithreading</a></li>
+        <li><a href="#">C++ Network Programming</a></li>
+
+	</ul>
+	</div>
+	<div class="right-content">
+        <h2>C++ Inheritance</h2>
+        <p>Inheritance is a fundamental concept in object-oriented programming that allows you to create new classes (derived classes) from existing classes (base classes). The derived classes inherit the properties and behaviors of the base class, and can also add new features or modify the existing ones. In C++, inheritance is implemented using the following syntax:</p>
+        <pre><code class="language-cpp">
+                class DerivedClass : public BaseClass {
+                    // Additional members and functions of the derived class
+                };
+                    </code></pre>
+            <h2>Example: Inheriting from a Base Class</h2>
+            <p>Here's an example that demonstrates inheritance in C++. We have a base class called <code>Shape</code>, which has a member function <code>printArea()</code>. We then create a derived class called <code>Rectangle</code> that inherits from the <code>Shape</code> class and adds its own member variable <code>length</code> and member function <code>calculateArea()</code>:</p>
+            <pre><code class="language-cpp">
+                    #include &lt;iostream&gt;
+                    using namespace std;
+
+                    // Base class
+                    class Shape {
+                    public:
+                    void printArea() {
+                    cout << "This is the base class." << endl;
+                    }
+                    };
+
+                    // Derived class
+                    class Rectangle : public Shape {
+                    private:
+                    int length;
+                    int width;
+
+                    public:
+                    Rectangle(int l, int w) {
+                    length = l;
+                    width = w;
+                    }
+                    void calculateArea() {
+                        int area = length * width;
+                        cout << "Area: " << area << endl;
+                    }
+                };
+
+                int main() {
+                // Create an object of the derived class
+                Rectangle rectangle(5, 7);
+                // Access the base class member function
+                    rectangle.printArea();
+
+                    // Access the derived class member function
+                    rectangle.calculateArea();
+
+                    return 0;
+                }
+            </code></pre>
+            <p>In this example, the Rectangle class inherits from the Shape class using the publicaccess specifier. This means that the public members of the Shape class are accessible in the Rectangle class. The Rectangle class adds its own members length and width and defines the calculateArea() member function to calculate the area of the rectangle. The printArea() member function is accessed from the base class.</p>
+            <p>When the program is run, it will output:</p>
+            <pre><code>
+            This is the base class.
+            Area: 35
+            </code></pre>
+            <p>The program demonstrates how the derived class inherits the printArea() member function from the base class and adds its own functionality with the calculateArea() member function.</p>
+            <br>
+            <h2>Types of Inheritance</h2>
+            <p>C++ supports different types of inheritance:</p>
+            <ul>
+            <li><p>Single Inheritance:</p> A derived class inherits from a single base class.</li>
+            <li><p>Multiple Inheritance:</p> A derived class inherits from multiple base classes.</li>
+            <li><p>Multilevel Inheritance:</p> A derived class inherits from another derived class.</li>
+            <li><p>Hierarchical Inheritance:</p> Multiple derived classes inherit from a single base class.</li>
+            <li><p>Hybrid Inheritance:</p> Combination of multiple types of inheritance.</li>
+            </ul>
+            <p>Each type of inheritance has its own use cases and implications, allowing you to create complex class hierarchies and relationships.</p>
+            </div>
+			<button class="scroll-up-button" onclick="scrollToTop()"><span class="skew-fix"></span></button>
+
+</main>
+<script src="c+js.js"></script>
+<footer>
+	<p>&copy; 2023 Your Website. All rights reserved.</p>
+</footer>
+</body>
+</html>
+

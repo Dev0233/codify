@@ -1,0 +1,165 @@
+<html><head>
+	<title>Strings and String Functions in Python</title>
+	<link rel="stylesheet" href="stylepython.css">
+	<script src="scriptpython.js"></script>
+	</head>
+	<body>
+		<header>
+		<a href = "python page.html" > <img src="logo.jpg" alt="Logo" class="logo"width="125" height="40"></a>
+		<div class="search-container">
+			<input type="text" id="search-input" name="q" placeholder="Search..."onkeypress="handleKeyPress(event)">
+			<button type="button"  onclick="searchSiteOrGoogle()"><span class="skew-fix">Search</span></button>
+		</div>
+	</header>
+		
+	<nav>
+		<ul class="menu cf">
+			<li><a href="home.html">Home</a></li>
+			<li><a href="arrayp.html">Arrays</a></li>
+			<li><a href="stringsp.html">Strings</a></li>
+			<li><a href="functionsp.html">Functions</a></li>
+			<li><a href="filehandlingp.html">File Handling</a></li>
+			<li><a href="datastructurep.html">Data Structures</a></li>
+			<li><a href="operatorsp.html">Operators in Python</a></li>
+		</ul>
+	</nav>
+	
+	<main>
+		<div class="left-content">
+			<h2>Categories</h2>
+			<ul>
+				<li><a href="introductionp.html">Introduction</a></li>
+				<li><a href="Datatypesp.html">Data Types</a></li>
+				<li><a href="listsp.html">Lists</a></li>
+				<li><a href="arrayp.html">Array</a></li>
+				<li><a href="stringsp.html">Strings</a></li>
+				<li><a href="userinputp.html">User Input in Python</a></li>
+				<li><a href="tuplesp.html">Tuples</a></li>
+				<li><a href="setsp.html">Sets</a></li>
+				<li><a href="dictionariesp.html">Dictionaries</a></li>
+				<li><a href="ifelsep.html">If-Else Statements in Python</a></li>
+				<li><a href="forp.html">For Loops in Python</a></li>
+				<li><a href="whilep.html">While Loops in Python</a></li>
+			</ul>
+		</div>
+	<div class="right-content">
+        <h2>Strings and String Functions in Python</h2><br><br>
+        <h3>Strings in Python</h3><br>
+            <p>Strings are a sequence of characters in Python. They can be enclosed in single quotes ('...') or double quotes ("...").</p>
+            <p>Here's an example:</p>
+            <ul class="pre"><pre><code>
+            # Declare a string variable
+            my_string = "Hello, World!"
+            
+            # Print the string
+            print(my_string)
+            
+            # Accessing characters in a string
+            print(my_string[0])    # Output: 'H'
+            print(my_string[6])    # Output: 'W'
+            print(my_string[-1])   # Output: '!'
+            </code></pre>
+            <p>The output of the above code would be:</p>
+            <pre><code>
+            Hello, World!
+            H
+            W
+            !
+            </code></pre></ul>
+            <p>Python provides a number of built-in functions for working with strings. Here are some of them:</p>
+            <ul class="pre">
+            <li><code>len()</code>: returns the length of a string</li>
+            <li><code>str.lower()</code>: returns a string in lowercase</li>
+            <li><code>str.upper()</code>: returns a string in uppercase</li>
+            <li><code>str.replace(old, new)</code>: replaces all occurrences of <code>old</code> with <code>new</code> in a string</li>
+            <li><code>str.strip()</code>: removes leading and trailing whitespace from a string</li>
+            <li><code>str.split()</code>: splits a string into a list of substrings based on a delimiter</li>
+            </ul>
+            <p>Here's an example:</p>
+            <ul class="pre"><pre><code>
+            # Declare a string variable
+            my_string = "Hello, World!"
+            
+            # Using built-in functions
+            print(len(my_string))                 # Output: 13
+            print(my_string.lower())              # Output: hello, world!
+            print(my_string.upper())              # Output: HELLO, WORLD!
+            print(my_string.replace("World", "Python"))    # Output: Hello, Python!
+            print(my_string.strip())              # Output: Hello, World!
+            
+            # Splitting a string
+            my_string = "Hello,Python,World!"
+            my_list = my_string.split(",")
+            print(my_list)                        # Output: ['Hello', 'Python', 'World!']
+            </code></pre>
+            <p>The output of the above code would be:</p>
+            <pre><code>
+            13
+            hello, world!
+            HELLO, WORLD!
+            Hello, Python!
+            Hello, World!
+            ['Hello', 'Python', 'World!']
+            </code></pre></ul>
+        <h3>String Functions</h3><br>
+        
+        <h4><li>len()</li></h4>
+        <p>Returns the length of a string.</p>
+        <ul class="pre"><code>
+          str = "Hello, world!"
+          print(len(str))
+        </code><br>
+        <code>Output: 13</code></ul>
+      
+        <h4><li>lower()</li></h4>
+        <p>Returns a copy of the string in lowercase.</p>
+        <ul class="pre"><code>
+          str = "Hello, world!"
+          print(str.lower())
+        </code><br>
+        <code>Output: hello, world!</code></ul>
+      
+        <h4><li>upper()</li></h4>
+        <p>Returns a copy of the string in uppercase.</p>
+        <ul class="pre"><code>
+          str = "Hello, world!"
+          print(str.upper())
+        </code><br>
+        <code>Output: HELLO, WORLD!</code></ul>
+      
+        <h4><li>strip()</li></h4>
+        <p>Returns a copy of the string with leading and trailing whitespace removed.</p>
+        <ul class="pre"><code>
+          str = "   Hello, world!   "
+          print(str.strip())
+        </code><br>
+        <code>Output: Hello, world!</code></ul>
+      
+        <h4><li>replace()</li></h4>
+        <p>Returns a copy of the string with all occurrences of a substring replaced with another substring.</p>
+        <ul class="pre"><code>
+          str = "Hello, world!"
+          print(str.replace("Hello", "Hi"))
+        </code><br>
+        <code>Output: Hi, world!</code></ul>
+      
+        <h4><li>split()</li></h4>
+        <p>Returns a list of substrings separated by a delimiter.</p>
+        <ul class="pre"><code>
+          str = "Hello, world!"
+          print(str.split(", "))
+        </code><br>
+        <code>Output: ['Hello', 'world!']</code></ul>
+      
+        <h4><li>join()</li></h4>
+        <p>Joins a list of strings with a specified separator.</p>
+        <ul class="pre"><code>
+          mylist = ['apple', 'banana', 'cherry']
+          separator = " and "
+          print(separator.join(mylist))
+        </code><br>
+        <code>Output: apple and banana and cherry</code></ul>
+      
+	</div>
+</main>
+</body></html>

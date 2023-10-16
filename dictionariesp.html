@@ -1,0 +1,184 @@
+<html><head>
+	<title>Dictionaries in Python</title>
+	<link rel="stylesheet" href="stylepython.css">
+	<script src="scriptpython.js"></script>
+	</head>
+	<body>
+		<header>
+		<a href = "home.html" > <img src="logo.jpg" alt="Logo" class="logo"  width="125" height="40"></a>
+		<div class="search-container">
+			<input type="text" id="search-input" name="q" placeholder="Search..."onkeypress="handleKeyPress(event)">
+			<button type="button"  onclick="searchSiteOrGoogle()"><span class="skew-fix">Search</span></button>
+		</div>
+	</header>
+	
+	<nav>
+		<ul class="menu cf">
+			<li><a href="home.html">Home</a></li>
+			<li><a href="arrayp.html">Arrays</a></li>
+			<li><a href="stringsp.html">Strings</a></li>
+			<li><a href="functionsp.html">Functions</a></li>
+			<li><a href="filehandlingp.html">File Handling</a></li>
+			<li><a href="datastructurep.html">Data Structures</a></li>
+			<li><a href="operatorsp.html">Operators in Python</a></li>
+		</ul>
+	</nav>
+	
+	<main>
+		<div class="left-content">
+			<h2>Categories</h2>
+			<ul>
+				<li><a href="introductionp.html">Introduction</a></li>
+				<li><a href="Datatypesp.html">Data Types</a></li>
+				<li><a href="listsp.html">Lists</a></li>
+				<li><a href="arrayp.html">Array</a></li>
+				<li><a href="stringsp.html">Strings</a></li>
+				<li><a href="userinputp.html">User Input in Python</a></li>
+				<li><a href="tuplesp.html">Tuples</a></li>
+				<li><a href="setsp.html">Sets</a></li>
+				<li><a href="dictionariesp.html">Dictionaries</a></li>
+				<li><a href="ifelsep.html">If-Else Statements in Python</a></li>
+				<li><a href="forp.html">For Loops in Python</a></li>
+				<li><a href="whilep.html">While Loops in Python</a></li>
+			</ul>
+		</div>
+    <div class="right-content">
+        <h2>Dictionaries in Python</h2><br>
+        <p>Dictionaries are a type of data structure in Python that store key-value pairs. Each key in a dictionary maps to a specific value, allowing you to easily retrieve the value associated with a given key.</p>
+        <br><br><h3>functions in Dictionaries</h3>
+        <h2>Dictionary Methods:</h2>
+		<h5><code>dict()</code>:</h5><p> creates a new dictionary</p><br>
+		<h5><code>len()</code>:</h5><p> returns the number of key-value pairs in the dictionary</p><br>
+		<h5><code>clear()</code>:</h5><p> removes all key-value pairs from the dictionary</p><br>
+		<h5><code>copy()</code>:</h5><p> returns a shallow copy of the dictionary</p><br>
+		<h5><code>get(key, default)</code>:</h5><p> returns the value for the specified key, or the default value if the key is not found</p><br>
+		<h5><code>items()</code>:</h5><p> returns a view object that contains the key-value pairs of the dictionary</p><br>
+		<h5><code>keys()</code>:</h5><p> returns a view object that contains the keys of the dictionary</p><br>
+		<h5><code>pop(key, default)</code>:</h5><p> removes the specified key-value pair from the dictionary and returns the value, or the default value if the key is not found</p><br>
+		<h5><code>popitem()</code>:</h5><p> removes and returns the last inserted key-value pair in the dictionary</p><br>
+		<h5><code>setdefault(key, default)</code>:</h5><p> returns the value for the specified key, or sets the key to the default value if the key is not found</p><br>
+		<h5><code>update(other_dict)</code>:</h5><p> adds the key-value pairs from another dictionary to the dictionary</p><br>
+		<h5><code>values()</code>:</h5><p> returns a view object that contains the values of the dictionary</p><br>
+            <p>Here are some examples of using these functions:</p>
+            <br>
+        <h3>Creating a Dictionary</h3><br>
+        <p>You can create a dictionary in Python by enclosing a set of key-value pairs in curly braces {} separated by commas. Here's an example:</p>
+		<ul class="pre">
+        <pre>
+          <code>
+            # Creating a dictionary
+            my_dict = {'apple': 2, 'banana': 3, 'orange': 4}
+          </code>
+        </pre>
+		</ul>
+      
+        <h3>Accessing Values in a Dictionary</h3><br>
+        <p>You can access the values in a dictionary by referencing the corresponding key. Here's an example:</p>
+		<ul class="pre">
+        <pre>
+          <code>
+            # Accessing a value in a dictionary
+            print(my_dict['apple']) 
+		# Output: 2
+          </code>
+        </pre>
+		</ul>
+        <h3>Updating a Dictionary</h3><br>
+        <p>You can update the values in a dictionary by simply assigning a new value to a specific key. Here's an example:</p>
+		<ul class="pre">
+        <pre>
+          <code>
+            # Updating a value in a dictionary
+            my_dict['apple'] = 5
+            print(my_dict) 
+		# Output: {'apple': 5, 'banana': 3, 'orange': 4}
+          </code>
+        </pre>
+      	</ul>
+        <h3>Looping Through a Dictionary</h3><br>
+        <p>You can loop through a dictionary using a for loop to access each key-value pair. Here's an example:</p>
+		<ul class="pre">
+        <pre>
+          <code>
+            # Looping through a dictionary
+            for key, value in my_dict.items():
+                print(key, value)
+          </code>
+        </pre>
+      	</ul>
+        <p>This will output:</p>
+		<ul class="pre">
+        <pre>
+          <code>
+            apple 5
+            banana 3
+            orange 4
+          </code>
+        </pre></ul>
+        <h3>Some More Examples</h3><br>
+        <ul class="pre"><pre><code>
+            my_dict = dict(name='John', age=30, country='USA')
+            print(len(my_dict)) 
+		# output: 3
+		</code></pre>
+        <pre><code>
+            my_dict.clear()
+            print(my_dict) 
+		# output: {}
+        </code></pre> 
+		<pre><code>  
+            my_dict = dict(name='John', age=30, country='USA')
+            my_dict_copy = my_dict.copy()
+            print(my_dict_copy) 
+		# output: {'name': 'John', 'age': 30, 'country': 'USA'}
+        </code></pre>
+		<pre><code>   
+            print(my_dict.get('name', 'Unknown')) 
+		# output: John
+		</code></pre>
+		<pre><code>
+            print(my_dict.get('address', 'Unknown')) 
+		# output: Unknown
+		</code></pre>
+        <pre><code>
+            print(my_dict.items()) 
+		# output: dict_items([('name', 'John'), ('age', 30), ('country', 'USA')])
+        </code></pre>
+		<pre><code>
+            print(my_dict.keys()) 
+		# output: dict_keys(['name', 'age', 'country'])
+		</code></pre>
+        <pre><code>    
+            print(my_dict.pop('age', 25)) 
+		# output: 30
+		</code></pre>
+		<pre><code>
+            print(my_dict) 
+		# output: {'name': 'John', 'country': 'USA'}
+        </code></pre>
+		<pre><code>
+            print(my_dict.popitem()) 
+		# output: ('country', 'USA')
+        </code></pre>  
+		<pre><code>  
+            print(my_dict.setdefault('address', 'Unknown')) 
+		# output: Unknown
+		</code></pre> 
+		<pre><code>
+            print(my_dict) 
+		# output: {'name': 'John', 'address': 'Unknown'}
+        </code></pre>
+		<pre><code>
+            my_dict.update({'city': 'New York'})
+            print(my_dict) 
+		# output: {'name': 'John', 'address': 'Unknown', 'city': 'New York'}
+        </code></pre>
+		<pre><code>  
+            print(my_dict.values()) 
+		# output: dict_values(['John', 'Unknown', 'New York'])
+		</code></pre></ul>
+      </div>
+      
+            
+</main>
+</body></html>

@@ -1,0 +1,133 @@
+<html><head>
+	<title>Data Types in Python</title>
+	<link rel="stylesheet" href="stylepython.css">
+	<script src="scriptpython.js"></script>
+	</head>
+	<body>
+		<header>
+		<a href = "home.html" > <img src="logo.jpg" alt="Logo" class="logo"  width="125" height="40"></a>
+		<div class="search-container">
+			<input type="text" id="search-input" name="q" placeholder="Search..."onkeypress="handleKeyPress(event)">
+			<button type="button"  onclick="searchSiteOrGoogle()"><span class="skew-fix">Search</span></button>
+		</div>
+	</header>
+		
+	<nav>
+		<ul class="menu cf">
+			<li><a href="home.html">Home</a></li>
+			<li><a href="arrayp.html">Arrays</a></li>
+			<li><a href="stringsp.html">Strings</a></li>
+			<li><a href="functionsp.html">Functions</a></li>
+			<li><a href="filehandlingp.html">File Handling</a></li>
+			<li><a href="datastructurep.html">Data Structures</a></li>
+			<li><a href="operatorsp.html">Operators in Python</a></li>
+		</ul>
+	</nav>
+	
+	<main>
+		<div class="left-content">
+			<h2>Categories</h2>
+			<ul>
+				<li><a href="introductionp.html">Introduction</a></li>
+				<li><a href="Datatypesp.html">Data Types</a></li>
+				<li><a href="listsp.html">Lists</a></li>
+				<li><a href="arrayp.html">Array</a></li>
+				<li><a href="stringsp.html">Strings</a></li>
+				<li><a href="userinputp.html">User Input in Python</a></li>
+				<li><a href="tuplesp.html">Tuples</a></li>
+				<li><a href="setsp.html">Sets</a></li>
+				<li><a href="dictionariesp.html">Dictionaries</a></li>
+				<li><a href="ifelsep.html">If-Else Statements in Python</a></li>
+				<li><a href="forp.html">For Loops in Python</a></li>
+				<li><a href="whilep.html">While Loops in Python</a></li>
+			</ul>
+		</div>
+	<div class="right-content">
+		<h1>Data Types in Python</h1>
+		<p>Python has several built-in data types, which can be divided into the following categories:</p>
+		<br>
+		<h3>Numeric Data Types:</h3>
+		<ul class="pre">
+			<li>Integers (int): These are whole numbers (positive, negative, or zero) that do not have a decimal point. For example:</li>
+			<pre><code>
+				x = 5
+				y = -10
+				z = 0</code></pre>
+			<li>Floating-point numbers (float): These are numbers that have a decimal point. For example:</li>
+			<pre><code>
+				a = 2.5
+				b = -3.75
+				c = 0.0</code></pre>
+			<li>Complex numbers (complex): These are numbers that have a real and imaginary part, expressed as a + bj. For example:</li>
+			<pre><code>
+				d = 2 + 3j
+				e = -4j
+				f = 1.5 - 2j</code></pre>
+		</ul>
+		<h3>Boolean Data Type:</h3>
+		<ul class="pre">
+			<li>Boolean (bool): This data type can only have two values, True or False. For example:</li>
+			<pre><code>
+				x = True
+				y = False</code></pre>
+		</ul>
+		<h3>Sequence Data Types:</h3>
+		<ul class="pre">
+			<li>Strings (str): These are sequences of characters, enclosed in either single or double quotes. For example:</li>
+			<pre><code>
+				s1 = 'hello'
+				s2 = "world"
+				s3 = "Python's cool"
+				s4 = 'He said, "Hello!"'</code></pre>
+			<li>Lists (list): These are ordered sequences of values, enclosed in square brackets and separated by commas. For example:</li>
+			<pre><code>
+				lst1 = [1, 2, 3]
+				lst2 = ['a', 'b', 'c']
+				lst3 = [1, 'hello', 2.5, True]</code></pre>
+			<li>Tuples (tuple): These are ordered sequences of values, enclosed in parentheses and separated by commas. Tuples are immutable, meaning their values cannot be changed once they are created. For example:</li>
+			<pre><code>
+				t1 = (1, 2, 3)
+				t2 = ('a', 'b', 'c')
+				t3 = (1, 'hello', 2.5, True)</code></pre>
+		</ul>
+		<h3>Mapping Data Type:</h3>
+		<ul class="pre">
+			<li>Dictionaries (dict): These are unordered collections of key-value pairs, enclosed in curly braces and separated by commas. The keys must be unique and immutable, while the values can be of any data type. For example:</li>
+			<pre><code>
+				d1 = {'name': 'Alice', 'age': 25, 'city': 'New York'}
+				d2 = {1: 'apple', 2: 'banana', 3: 'cherry'}
+				d3 = {'a': 1, 'b': 2, 'c': 3}</code></pre>
+		</ul>
+		<h3>Set Data Type:</h3>
+		<ul class="pre">
+			<li>Sets (set): These are unordered collections of unique elements,enclosed in curly braces and separated by commas. For example:
+			</li><pre><code>
+				s1 = {1, 2, 3}
+				s2 = {'a', 'b', 'c'}
+				s3 = {1, 'hello', 2.5, True}
+				</code></pre>
+		</ul>
+		<h3>Sequence Containers:</h3>
+		<ul class="pre">
+			<li>Sequence Containers are collections of ordered sequences.</li>
+			<li>Bytearrays (bytearray): These are mutable sequences of bytes, which can be modified after creation. For example:</li>
+			<pre><code>
+				ba1 = bytearray(b'hello')
+				ba1[0] = ord('H')
+				print(ba1)</code></pre>
+			<li>Bytes (bytes): These are immutable sequences of bytes, which cannot be modified after creation. For example:</li>
+			<pre><code>
+				b1 = b'hello'
+				b2 = bytes([72, 101, 108, 108, 111])</code></pre>
+
+		</ul>
+		<h3>NoneType Data Type:</h3>
+		<ul class="pre">
+			<li>None (NoneType): This data type has only one value, None. It is used to represent the absence of a value or to indicate that a variable does not have a value. For example:</li>
+			<pre><code>x = None</code></pre>
+			<li>These are all the major data types in Python. It is important to understand the different data types and how to use them, as they are the building blocks of any program.</li>
+		</ul>
+		
+	</div>
+</main>
+</body></html>

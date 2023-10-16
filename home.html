@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>codify</title>
+	<style>
+		body{
+			background-color: #000;
+    		background-size: cover;
+    		background-repeat: no-repeat;
+		}
+		/* Style for the header */
+		header {
+			background-color: transparent; /* Dark blue color with 50% opacity */
+      		color: rgb(8, 2, 2);
+      		padding: 5px;
+      		text-align: center;
+      		position: relative;
+
+		}
+		h1 {
+			font-size: 48px;
+			margin: 0;
+		}
+		.logo {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			padding: 1px;
+		}
+		/* Style for the navigation bar */
+		/* Menu Dropdown */
+		.cf:before,
+		.cf:after {
+			content: " ";
+			display: table;
+		}
+
+		.cf:after {
+			clear: both;
+		}
+
+		.cf {
+			zoom: 1;
+		}
+
+		.menu,
+		.submenu {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		}
+
+		.menu {   
+		margin: 50px auto;
+		width: 800px;   
+		width: -moz-fit-content;
+		width: -webkit-fit-content;
+		width: fit-content; 
+		}
+
+		.menu > li {
+		background: #000;
+		float: left;
+		position: relative;
+		transform: skewX(25deg);
+		}
+
+		.menu a {
+		display: block;
+		color: #fff;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-family: Arial, Helvetica;
+		font-size: 15px;
+		}  
+
+		.menu li:hover {
+		background: #0e950e;
+		}  
+
+		.menu > li > a {
+		transform: skewX(-25deg);
+		padding: 1em 2em;
+		}
+
+		/* Dropdown */
+		.submenu {
+		position: absolute;
+		width: 200px;
+		left: 50%; margin-left: -100px;
+		transform: skewX(-25deg);
+		transform-origin: left top;
+		}
+
+		.submenu li {
+		background-color: #0e950e;
+		position: relative;
+		overflow: hidden;  
+		}      
+
+		.submenu > li > a {
+		padding: 1em 2em;   
+		}
+
+		.submenu > li::after {
+		content: '';
+		position: absolute;
+		top: -125%;
+		height: 100%;
+		width: 100%;   
+		box-shadow: 0 0 50px rgba(0, 0, 0, .9);   
+		}  
+
+		.submenu > li:nth-child(odd){
+		transform: skewX(-25deg) translateX(0);
+		}
+
+		.submenu > li:nth-child(odd) > a {
+		transform: skewX(25deg);
+		}
+
+		.submenu > li:nth-child(odd)::after {
+		right: -50%;
+		transform: skewX(-25deg) rotate(3deg);
+		}    
+
+		.submenu > li:nth-child(even){
+		transform: skewX(25deg) translateX(0);
+		}
+
+		.submenu > li:nth-child(even) > a {
+		transform: skewX(-25deg);
+		}
+
+		.submenu > li:nth-child(even)::after {
+		left: -50%;
+		transform: skewX(25deg) rotate(3deg);
+		}
+
+		/* Show dropdown */
+		.submenu,
+		.submenu li {
+		opacity: 0;
+		visibility: hidden;   
+		}
+
+		.submenu li {
+		transition: .2s ease transform;
+		}
+
+		.menu > li:hover .submenu,
+		.menu > li:hover .submenu li {
+		opacity: 1;
+		visibility: visible;
+		}  
+
+		.menu > li:hover .submenu li:nth-child(even){
+		transform: skewX(25deg) translateX(15px);   
+		}
+
+		.menu > li:hover .submenu li:nth-child(odd){
+		transform: skewX(-25deg) translateX(-15px);   
+		}
+
+		
+		/* Style for the main content */
+		main {
+			display: flex;
+			flex-direction: row;
+			padding: 20px;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+		.left-content {
+			flex-basis: 20%;
+			background-color: transparent;
+			padding: 20px;
+		}
+		.left-content h2 {
+			font-size: 24px;
+			margin-top: 0;
+		}
+		.left-content ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		.left-content li {
+			margin: 10px 10px;
+			padding: 0px px;
+		}
+		.left-content a {
+			color: #333;
+			text-decoration: none;
+			font-size: 18px;
+		}
+		.right-content {
+			flex-basis: 100%;
+			background-color: transparent;
+			padding: 20px;
+		
+		}
+		
+		h2 {
+			font-size: 30px;
+			font-style: Arial;
+			color: white;
+			margin-top: 0;
+			text-decoration: underline;
+		}
+		h3 {
+			font-size: 25px;
+			font-style: Arial;
+			color: black;
+			margin-top: 0;
+		
+		}
+
+		p {
+			font-size: 20px;
+			font-style: Arial;
+			color: #fff;
+			line-height: 1.5;
+			margin: 0;
+			max-width: auto;
+		}
+		.search-button {
+			background-color: #131212;
+			color: white;
+			font-family: Arial, Helvetica;
+			font-size: 15px;
+			padding: 7px 15px;
+			border: none;
+			margin-top: 10px;
+			cursor: pointer;
+			display: inline-block;
+			transform: skewX(25deg) translateX(15px);
+			}
+		.search-button:hover {
+			background-color: #0e950e;
+			color: black;
+	
+		}
+		.search-container {
+			display: flex;
+			align-items: left;
+			background-color: transparent;
+			padding: 0px 90px;
+		}
+		.search-container input[type="text"] {
+  			width: 800px;
+  			padding: 10px 10px;
+			margin: 8px 87px;
+			box-sizing: border-box;
+			border: 2px solid #0b0a0a;
+			border-radius: 4px;
+			background-color: transparent;
+			font-size: 16px;
+		}
+    
+		#courses-section {
+			background-color: transparent;
+			padding: 80px 20px;
+			text-align: center;
+		}
+
+		#courses-section h2 {
+			color: white;
+			font-size: 30px;
+			font-style: Arial;
+			margin-bottom: 20px;
+		}
+
+		/* course Section Styles */
+		.course {
+			display: inline-block;
+			width: 130px; /* Increased width to provide space for the content */
+			padding: 20px;
+			margin: 20px;
+			text-align: center; /* Center-align the content */
+			background-color: transparent;
+			border-radius: 5px;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		}
+
+		.course img {
+			max-width: 100%;
+			margin-bottom: 10px;
+			border-radius: 15px;
+			box-shadow: 0 7px 15px rgb(14, 161, 60);
+			background-color: transparent;
+			
+		}
+
+		.course h3 {
+			font-size: 20px;
+			margin-bottom: 10px;
+			color: white; /* Set the color for course title */
+		}
+
+		.course p {
+			font-size: 16px;
+			color: white; /* Set the color for course description */
+		}
+
+    /* Testimonial Section Styles */
+
+		#testimonial-section {
+		padding: 100px 20px;
+		text-align: center;
+		}
+
+		#testimonial-section h2 {
+		color: white;
+		font-size: 30px;
+		margin-bottom: 20px;
+		}
+
+		.testimonial {
+		display: inline-block;
+		width: 290px;
+		padding: 20px;
+		margin: 20px;
+		text-align: left;
+		background-color: transparent;
+		border-radius: 5px;
+		box-shadow: 0 2px 5px rgb(246, 239, 239);
+		}
+
+		.testimonial img {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		margin-bottom: 10px;
+		}
+
+		.testimonial blockquote {
+		font-size: 16px;
+		color: white;
+		margin-bottom: 10px;
+		}
+
+		.testimonial cite {
+		color:white;
+		font-size: 14px;
+		}
+		.pic{
+			padding: 40;
+			text-align: center;
+		}
+		.center{
+			display: inline-block;
+			width: 1040px;
+			padding: 80px;
+			margin: 20px;
+			text-align: center;
+			background-color: transparent;
+			border-radius: 5px;
+		}
+		.scroll-up-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      background-color: #333;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      z-index: 999;
+      display: none;
+    }
+    
+    .scroll-up-button:hover {
+      background-color: #666;
+    }
+    
+    .scroll-up-button::before {
+      content: '\2191';
+      color: #fff;
+      font-size: 24px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+	.skew-fix{
+    display: inline-block;
+    transform: skew(-25deg);
+    font-family: Arial, Helvetica, sans-serif;
+}
+	
+	</style>
+</head>
+<body>
+	<header>
+	<a href="home.html">
+	<img src="logo.jpg" alt="Logo" class="logo" width="125" height="40">
+	</a>
+	<div class="search-container">
+		<form action="/search">
+			<label for="search-input"> </label>
+			<input type="text" id="search-input" name="q" placeholder="Search..." onkeypress="handleKeyPress(event)">
+			<button type="button" class="search-button" onclick="searchSiteOrGoogle()"><span class="skew-fix">Search</span></button>
+		</form>
+	</div>
+</header>
+	
+<nav>
+	<ul class="menu cf">
+		<li><a href="home.html">Home</a></li>
+		<li><a href="">Languages</a>
+		<ul class="submenu">
+		<li><a href="c++ page.html">C++ Language</a></li>
+		<li><a href="Introductionp.html">Python</a></li>
+		<li><a href="">C language</a></li>
+		<li><a href="">HTML</a></li>
+		<li><a href="">SQL</a></li>
+		</ul>
+		<li><a href="">DSA</a></li>
+		<li><a href="">Interview Prepration</a></li>
+		<li><a href="">Videos</a></li>
+		<li><a href="">Aptitude</a></li>
+		<li><a href="">Reasoning</a></li>
+		<li><a href="https://www.blogger.com/blogger.g?blogID=1719501309664700552">Contact us</a></li>
+	</ul>
+</nav>
+	<div class="pic">
+	<img src="background.jpg" alt="Image" width="700" height="350" >
+	</div>
+	<section>
+		<div class="center">
+			<h2>About Codify</h2>
+			<br><br>
+			<p>Codify is your one-stop destination for learning programming languages, algorithms, and software development. Whether you are a beginner taking your first steps in coding or an experienced developer looking to expand your skill set, Codify provides the resources and guidance you need to succeed. Our platform offers a diverse range of programming languages to choose from, including popular options like Python, Html, C++, C and SQL. We understand that different languages serve different purposes, and we aim to cater to all learners' needs and interests. At Codify, we believe in a hands-on approach to learning. Our comprehensive tutorials and interactive exercises provide a solid foundation for understanding key programming concepts, syntax, and best practices. You'll have the opportunity to apply what you've learned through real-world projects, giving you valuable experience in building practical solutions.Not sure which language to start with? No problem! Our guided language selection process will help you identify the language that aligns with your goals and interests. We provide detailed insights into each language, highlighting their strengths, applications, and industry demand, so you can make an informed decision.	Join the Codify community today and embark on your coding journey. Our supportive community of learners and experienced instructors will be there to guide you every step of the way. Whether you're aiming to become a full-stack developer, data scientist, or software engineer, Codify has the resources to help you achieve your goals.</p>
+		</div>
+	</section>
+	<section id="courses-section">
+		<h2>Our Courses</h2>
+		<div class="course">
+			<a href="Introductionp.html">
+		  <img  src="python.jpg" alt="Course 1">
+		</a>
+		  <h3>Python Programming</h3>
+		</div>
+		<div class="course">
+		  <img src="c.jpg" alt="Course 2">
+		  <h3>C Programming</h3>
+		</div>
+		<div class="course">
+			<a href="c++ page.html">
+		  <img src="c++.jpg" alt="Course 3">
+			</a>
+		  <h3>C++ Programming</h3>
+		</div>
+		<div class="course">
+			<img src="html.jpg" alt="Course 4">
+			<h3>HTML Programming</h3>
+		</div>
+		 <div class="course">
+			<img src="sql.jpg" alt="Course 5">
+			<h3>SQL Programming</h3>
+		</div>
+	  </section>
+	
+	  <section id="testimonial-section">
+		<h2>Student Testimonials</h2>
+		<br><br>
+		<div class="testimonial">
+		  <img src="1.png" alt="Student 1">
+		  <blockquote>"Codify helped you kickstart your programming career. The courses were well-structured, and the instructors were knowledgeable."</blockquote>
+		  <cite>- Team Codify</cite>
+		</div>
+		<div class="testimonial">
+		  <img src="1.png" alt="Student 2">
+		  <blockquote>"I never thought coding could be so much fun! Thanks to Codify, I now have a strong understanding of Python programming."</blockquote>
+		  <cite>- Gaurang Dwivedi</cite>
+		</div>
+		<div class="testimonial">
+			<img src="1.png" alt="Student 3">
+			<blockquote>"I never thought coding could be so much fun! Thanks to Codify, I now have a strong understanding of HTML programming."</blockquote>
+			<cite>- Aishwarya Gupta</cite>
+		  </div>
+		  <div class="testimonial">
+			<img src="1.png" alt="Student 4">
+			<blockquote>"I never thought coding could be so much fun! Thanks to Codify, I now have a strong understanding of C programming."</blockquote>
+			<cite>- Pragati Singh</cite>
+		  </div>
+		  <div class="testimonial">
+			<img src="1.png" alt="Student 5">
+			<blockquote>"I never thought coding could be so much fun! Thanks to Codify, I now have a strong understanding of SQL programming."</blockquote>
+			<cite>- Aman Nigam</cite>
+		  </div>
+		  <div class="testimonial">
+			<img src="1.png" alt="Student 6">
+			<blockquote>"I never thought coding could be so much fun! Thanks to Codify, I now have a strong understanding of C++ programming."</blockquote>
+			<cite>- Devashish Mishra </cite>
+		  </div>
+	  </section>
+	  <button class="scroll-up-button" onclick="scrollToTop()"><span class="skew-fix"></span></button>
+	<script src="c+js.js"></script> 
+</body>
+</html>
+
+
+    

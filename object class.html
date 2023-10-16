@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> C++ Tutorial </title>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+	<header>
+	<a href="home.html">
+	<img src="logo.jpg" alt="Logo" class="logo" width="125" height="40">
+	</a>
+	<div class="search-container">
+		<form action="/search">
+			<label for="search-input"> </label>
+			<input type="text" id="search-input" name="q" placeholder="Search..." onkeypress="handleKeyPress(event)">
+			<button type="button" class="search-button" onclick="searchSiteOrGoogle()"><span class="skew-fix">Search</span></button>
+		</form>
+	</div>
+</header>
+	
+<nav>
+	<ul class="menu cf">
+		<li><a href="home.html">Home</a></li>
+		<li><a href="c++ array.html">Arrays</a></li>
+		<li><a href="home.html">Strings</a></li>
+		<li><a href="c++ functions.html">Functions</a></li>
+		<li><a href="home.html">File Handling</a></li>
+		<li><a href="home.html">Data Structures</a></li>
+		<li><a href="pointers.html">Pointers</a></li>
+		<li><a href="home.html">C++ Programs</a></li>
+	</ul>
+</nav>
+
+<main>
+	<div class="left-content">
+		<h2>Categories</h2>
+		<ul>
+        <li><a href="home.html">C++ Tutorial</a></li>
+        <li><a href="control statement.html">C++ Control Statement</a></li>
+        <li><a href="c++ functions.html">C++ Functions</a></li>
+        <li><a href="c++ array.html">C++ Arrays</a></li>
+        <li><a href="pointers.html">C++ Pointers</a></li>
+        <li><a href="object class.html">C++ Object Class</a></li>
+        <li><a href="c++ inheritance.html">C++ Inheritance</a></li>
+        <li><a href="c++ polymorphism.html">C++ Polymorphism</a></li>
+        <li><a href="#">C++ Abstraction</a></li>
+        <li><a href="#">C++ Strings</a></li>
+        <li><a href="#">Signal Handling</a></li>
+        <li><a href="#">C++ Exception Handling</a></li>
+        <li><a href="#">C++ Templates</a></li>
+        <li><a href="#">C++ Standard Template Library (STL)</a></li>
+        <li><a href="#">C++ Multi-Threading</a></li>
+        <li><a href="#">C++ File Handling</a></li>
+        <li><a href="#">C++ Graphics</a></li>
+        <li><a href="#">C++ Networking</a></li>
+        <li><a href="#">C++ Data Structures</a></li>
+        <li><a href="#">C++ Templates</a></li>
+        <li><a href="#">C++ File Handling</a></li>
+        <li><a href="#">C++ Smart Pointers</a></li>
+        <li><a href="#">C++ Multithreading</a></li>
+        <li><a href="#">C++ Network Programming</a></li>
+
+	</ul>
+	</div>
+	<div class="right-content">
+		<h2>Object Class in C++</h2>
+			<p>
+				In C++, a class is a blueprint for creating objects that encapsulate data and behavior. An object is an instance of a class, and it can have its own data members and member functions.
+			</p>
+			<h3>Example:</h3>
+			<p>
+				Here's an example of defining a class and creating objects in C++:
+			</p>
+			<pre>
+				<code>
+					#include &lt;iostream&gt;
+
+					// Define a class named 'Person'
+					class Person {
+						private:
+							std::string name;
+							int age;
+
+						public:
+							void setName(std::string n) {
+								name = n;
+							}
+
+							void setAge(int a) {
+								age = a;
+							}
+
+							void displayInfo() {
+								std::cout << "Name: " << name << std::endl;
+								std::cout << "Age: " << age << std::endl;
+							}
+					};
+
+					int main() {
+						// Create objects of the 'Person' class
+						Person person1;
+						Person person2;
+
+						// Set data for person1
+						person1.setName("John Doe");
+						person1.setAge(25);
+
+						// Set data for person2
+						person2.setName("Jane Smith");
+						person2.setAge(30);
+
+						// Display information of both persons
+						std::cout << "Person 1:" << std::endl;
+						person1.displayInfo();
+						std::cout << std::endl;
+
+						std::cout << "Person 2:" << std::endl;
+						person2.displayInfo();
+
+					return 0;
+				}
+			</code>
+		</pre>
+		<p>
+			The above code defines a class named 'Person' with private data members 'name' and 'age', and public member functions to set and display the information. In the 'main' function, two objects of the 'Person' class are created, and their data is set using the member functions. The information of both persons is then displayed using the 'displayInfo' function.
+		</p>
+		<p>
+			The output of the above code will be:
+		</p>
+		<pre>
+			<code>
+				Person 1:
+				Name: John Doe
+				Age: 25
+
+				Person 2:
+				Name: Jane Smith
+				Age: 30
+			</code>
+		</pre>
+		<p>
+			With classes and objects, you can create reusable and modular code in C++. Objects allow you to represent real-world entities and perform operations on them using member functions.
+		</p>
+		<p>
+			For more details and advanced concepts of object-oriented programming in C++, you can refer to the <a href="https://www.example.com">C++ Object-Oriented Programming Documentation</a>.
+		</p>
+	</div>
+	<button class="scroll-up-button" onclick="scrollToTop()"><span class="skew-fix"></span></button>
+</main>
+<script src="c+js.js"></script>
+<footer>
+	<p>&copy; 2023 Your Website. All rights reserved.</p>
+</footer>
+</body>
+</html>

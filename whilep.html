@@ -1,0 +1,172 @@
+<html><head>
+	<title>While Loop in Python</title>
+	<link rel="stylesheet" href="stylepython.css">
+	<script src="scriptpython.js"></script>
+	</head>
+	<body>
+		<header>
+		<a href = "python page.html" > <img src="logo.jpg" alt="Logo" class="logo" width="125" height="40"></a>
+		<div class="search-container">
+			<input type="text" id="search-input" name="q" placeholder="Search..."onkeypress="handleKeyPress(event)">
+			<button type="button"  onclick="searchSiteOrGoogle()"><span class="skew-fix">Search</span></button>
+		</div>
+	</header>
+		
+	<nav>
+		<ul class="menu cf">
+			<li><a href="home.html">Home</a></li>
+			<li><a href="arrayp.html">Arrays</a></li>
+			<li><a href="stringsp.html">Strings</a></li>
+			<li><a href="functionsp.html">Functions</a></li>
+			<li><a href="filehandlingp.html">File Handling</a></li>
+			<li><a href="datastructurep.html">Data Structures</a></li>
+			<li><a href="operatorsp.html">Operators in Python</a></li>
+		</ul>
+	</nav>
+	
+	<main>
+		<div class="left-content">
+			<h2>Categories</h2>
+			<ul>
+				<li><a href="introductionp.html">Introduction</a></li>
+				<li><a href="Datatypesp.html">Data Types</a></li>
+				<li><a href="listsp.html">Lists</a></li>
+				<li><a href="arrayp.html">Array</a></li>
+				<li><a href="stringsp.html">Strings</a></li>
+				<li><a href="userinputp.html">User Input in Python</a></li>
+				<li><a href="tuplesp.html">Tuples</a></li>
+				<li><a href="setsp.html">Sets</a></li>
+				<li><a href="dictionariesp.html">Dictionaries</a></li>
+				<li><a href="ifelsep.html">If-Else Statements in Python</a></li>
+				<li><a href="forp.html">For Loops in Python</a></li>
+				<li><a href="whilep.html">While Loops in Python</a></li>
+			</ul>
+		</div>
+	<div class="right-content">
+		<h1>Theory of While Loop in Python</h1><br><br>
+		<p>
+			The <code>while</code> loop in Python is a control flow statement that allows you to repeatedly execute a block of code as long as a specified condition is true. It provides a way to create iterative behavior in your programs.
+		</p>
+		<br><br><h2>Syntax:</h2><br><br>
+		<ul class="pre"><pre>
+			<code>
+		while condition:
+			# Code block to be executed while the condition is true
+			</code>
+		</pre></ul>
+		<h2>Explanation:</h2>
+		<ul class="pre">
+			<li>
+			<strong>Condition:</strong> The condition is an expression that is checked before each iteration of the loop. If the condition is true, the code block is executed. If the condition is false, the code block is skipped, and the loop is not executed at all.
+			</li><br>
+			<li>
+			<strong>Code Block:</strong> The code block is the indented section of code that follows the <code>while</code> statement. It contains the instructions you want to repeat as long as the condition is true.
+			</li><br>
+			<li>
+			<strong>Iteration:</strong> The loop iterates over the code block repeatedly as long as the condition remains true. After each iteration, the condition is re-evaluated. If the condition is still true, the loop continues to the next iteration. If the condition becomes false, the loop terminates.
+			</li><br>
+			<li>
+			<strong>Updating the Condition:</strong> To prevent an infinite loop, it's crucial to update the variables or expressions involved in the condition within the loop code block to make progress toward terminating the loop.
+			</li><br>
+		</ul>
+		<h2>Example:</h2>
+		<ul class="pre"><pre>
+			<code>
+		count = 0
+
+		while count &lt; 5:
+			print("Count:", count)
+			count += 1
+
+		print("Loop finished")
+			</code>
+		</pre></ul>
+		<h3>Examples of While Loops in Python</h3>
+		
+		<h3>1. Counting Down</h3>
+		<ul class="pre"><pre>
+			<code>
+		count = 10
+
+		while count &gt; 0:
+			print(count)
+			count -= 1
+
+		print("Blastoff!")
+			</code>
+		</pre>
+		<p>
+			Output:
+			<br>
+			10
+			<br>
+			9
+			<br>
+			8
+			<br>
+			7
+			<br>
+			6
+			<br>
+			5
+			<br>
+			4
+			<br>
+			3
+			<br>
+			2
+			<br>
+			1
+			<br>
+			Blastoff!
+		</p>
+		</ul>
+		<h3>2. User Input Validation</h3>
+		<ul class="pre"><pre>
+			<code>
+		password = input("Enter your password: ")
+
+		while password != "secret":
+			print("Invalid password!")
+			password = input("Enter your password: ")
+
+		print("Access granted!")
+			</code>
+		</pre>
+		<p>
+			Output:
+			<br>
+			Enter your password: test
+			<br>
+			Invalid password!
+			<br>
+			Enter your password: 12345
+			<br>
+			Invalid password!
+			<br>
+			Enter your password: secret
+			<br>
+			Access granted!
+		</p>
+	</ul>
+		<h3>3. Summing Numbers</h3>
+		<ul class="pre"><pre>
+			<code>
+		total = 0
+		number = 1
+
+		while number &lt;= 10:
+			total += number
+			number += 1
+
+		print("The sum is:", total)
+			</code>
+		</pre>
+		<p>
+			Output:
+			<br>
+			The sum is: 55
+		</p></ul>
+	</div>
+</main>
+</body></html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>codify</title>
+	<link rel="stylesheet" href="stylepython.css">
+	<script src="scriptpython.js"></script>
+</head>
+<body>
+	<header>
+	<a href = "python page.html" > <img src="logo.jpg" alt="Logo" class="logo" width="135" height="50"></a>
+	<div class="search-container">
+		<input type="text" id="search-input" name="q" placeholder="Search..." onkeypress="handleKeyPress(event)">
+		<button  class="my-button hover-button" onclick="searchSiteOrGoogle()">Search</button>
+	</div>
+</header>
+	
+<nav>
+	<ul class="menu cf">
+		<li><a href="home.html">Home</a></li>
+		<li><a href="array.html">Arrays</a></li>
+		<li><a href="strings.html">Strings</a></li>
+		<li><a href="functions.html">Functions</a></li>
+		<li><a href="filehandling.html">File Handling</a></li>
+		<li><a href="datastructure.html">Data Structures</a></li>
+		<li><a href="programs.html">Python Programs</a></li>
+		<li><a href="operators.html">Operators in Python</a></li>
+	</ul>
+</nav>
+
+<main>
+	<div class="left-content">
+		<h2>Categories</h2>
+		<ul>
+			<li><a href="introduction.html">Introduction</a></li>
+            <li><a href="Datatypes.html">Data Types</a></li>
+            <li><a href="lists.html">Lists</a></li>
+            <li><a href="array.html">Array</a></li>
+			<li><a href="strings.html">Strings</a></li>
+			<li><a href="userinput.html">User Input in Python</a></li>
+			<li><a href="tuples.html">Tuples</a></li>
+			<li><a href="sets.html">Sets</a></li>
+			<li><a href="dictionaries.html">Dictionaries</a></li>
+			<li><a href="ifelse.html">If-Else Statements in Python</a></li>
+			<li><a href="for.html">For Loops in Python</a></li>
+			<li><a href="while.html">While Loops in Python</a></li>
+		</ul>
+	</div>
+    <div class="right-content">
+        <br><h4>1. Opening a File</h4><br>
+        <ul class="pre"><pre><code>
+            file = open('example.txt', 'r')
+        </code></pre></ul>
+        
+        <br><h4>2. Reading from a File using read()</h4><br>
+        <ul class="pre"><pre><code>
+            file = open('example.txt', 'r')
+            content = file.read()
+            print(content)
+            file.close()
+        </code></pre></ul>
+        
+        <br><h4>3. Reading from a File using readline()</h4><br>
+        <ul class="pre"><pre><code>
+            file = open('example.txt', 'r')
+            line = file.readline()
+            while line:
+                print(line)
+                line = file.readline()
+            file.close()
+        </code></pre></ul>
+        
+        <br><h4>4. Reading from a File using readlines()</h4><br>
+        <ul class="pre"><pre><code>
+            file = open('example.txt', 'r')
+            lines = file.readlines()
+            for line in lines:
+                print(line)
+            file.close()
+        </code></pre></ul>
+        
+        <br><h4>5. Writing to a File</h4><br>
+        <ul class="pre"><pre><code>
+            file = open('example.txt', 'w')
+            file.write('Hello, World!')
+            file.close()
+        </code></pre></ul>
+        
+        <br><h4>6. Appending to a File</h4><br>
+        <ul class="pre"><pre><code>
+            file = open('example.txt', 'a')
+            file.write('Hello, World!')
+            file.close()
+        </code></pre></ul>
+        
+        <br><h4>7. Closing a File using close()</h4><br>
+        <ul class="pre"><pre><code>
+            file = open('example.txt', 'r')
+            content = file.read()
+            print(content)
+            file.close()
+        </code></pre></ul>
+        
+        <br><h4>8. Context Managers using with statement</h4><br>
+        <ul class="pre"><pre><code>
+            with open('example.txt', 'r') as file:
+                content = file.read()
+                print(content)
+        </code></pre></ul>
+      </div>
+      
+      <a id="scroll-to-top" href="#"><i class="fas fa-arrow-up"></i>/\</a>   
+</main>
+
+</body></html>

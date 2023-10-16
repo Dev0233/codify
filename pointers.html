@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> C++ Tutorial </title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+	<a href="home.html">
+	<img src="logo.jpg" alt="Logo" class="logo" width="125" height="40">
+	</a>
+	<div class="search-container">
+		<form action="/search">
+			<label for="search-input"> </label>
+			<input type="text" id="search-input" name="q" placeholder="Search..." onkeypress="handleKeyPress(event)">
+			<button type="button" class="search-button" onclick="searchSiteOrGoogle()"><span class="skew-fix">Search</span></button>
+		</form>
+	</div>
+</header>
+	
+<nav>
+	<ul class="menu cf">
+		<li><a href="home.html">Home</a></li>
+		<li><a href="c++ array.html">Arrays</a></li>
+		<li><a href="home.html">Strings</a></li>
+		<li><a href="c++ functions.html">Functions</a></li>
+		<li><a href="home.html">File Handling</a></li>
+		<li><a href="home.html">Data Structures</a></li>
+		<li><a href="pointers.html">Pointers</a></li>
+		<li><a href="home.html">C++ Programs</a></li>
+	</ul>
+</nav>
+
+<main>
+	<div class="left-content">
+		<h2>Categories</h2>
+		<ul>
+        <li><a href="c++ page.html">C++ Tutorial</a></li>
+        <li><a href="control statement.html">C++ Control Statement</a></li>
+        <li><a href="c++ functions.html">C++ Functions</a></li>
+        <li><a href="c++ array.html">C++ Arrays</a></li>
+        <li><a href="pointers.html">C++ Pointers</a></li>
+        <li><a href="object class.html">C++ Object Class</a></li>
+        <li><a href="c++ inheritance.html">C++ Inheritance</a></li>
+        <li><a href="c++ polymorphism.html">C++ Polymorphism</a></li>
+        <li><a href="#">C++ Abstraction</a></li>
+        <li><a href="#">C++ Strings</a></li>
+        <li><a href="#">Signal Handling</a></li>
+        <li><a href="#">C++ Exception Handling</a></li>
+        <li><a href="#">C++ Templates</a></li>
+        <li><a href="#">C++ Standard Template Library (STL)</a></li>
+        <li><a href="#">C++ Multi-Threading</a></li>
+        <li><a href="#">C++ File Handling</a></li>
+        <li><a href="#">C++ Graphics</a></li>
+        <li><a href="#">C++ Networking</a></li>
+        <li><a href="#">C++ Data Structures</a></li>
+        <li><a href="#">C++ Templates</a></li>
+        <li><a href="#">C++ File Handling</a></li>
+        <li><a href="#">C++ Standard Template Library (STL)</a></li>
+        <li><a href="#">C++ Smart Pointers</a></li>
+        <li><a href="#">C++ Multithreading</a></li>
+        <li><a href="#">C++ Network Programming</a></li>
+
+	</ul>
+	</div>
+	<div class="right-content">
+        <h2>Pointers in C++</h2>
+			<p>
+				In C++, a pointer is a variable that holds the memory address of another variable. Pointers allow direct manipulation of memory and provide a way to work with dynamically allocated memory.
+			</p>
+			<h3>Example:</h3>
+			<p>
+				Here's an example of declaring and using pointers in C++:
+			</p>
+			<pre>
+				<code>
+					#include &lt;iostream&gt;
+
+					int main() {
+						int number = 10; // Declare an integer variable
+						int* pointer = &number; // Declare a pointer and assign the address of 'number'
+
+						std::cout << "Value of number: " << number << std::endl;
+						std::cout << "Address of number: " << &number << std::endl;
+						std::cout << "Value of pointer: " << pointer << std::endl;
+						std::cout << "Value pointed by pointer: " << *pointer << std::endl;
+
+						return 0;
+					}
+				</code>
+			</pre>
+			<p>
+				The above code declares an integer variable named "number" and a pointer named "pointer". The pointer is assigned the address of the "number" variable using the address-of operator (&). The code then prints the value of "number", the address of
+				"number", the value of the pointer, and the value pointed by the pointer using the dereference operator (*).	
+			</p>
+			<p>
+			The output of the above code will be:
+			</p>
+			<pre>
+			<code>
+			Value of number: 10
+			Address of number: 0x7ffc15d8721c (memory address will vary)
+			Value of pointer: 0x7ffc15d8721c (same as the address of number)
+			Value pointed by pointer: 10
+			</code>
+			</pre>
+			<p>
+			Pointers are commonly used in C++ for various purposes such as dynamic memory allocation, passing arguments to functions by reference, and working with arrays and data structures.
+			</p>
+			<p>
+			For more details and advanced operations on pointers in C++, you can refer to the <a href="https://www.example.com">C++ Pointers Documentation</a>.
+			</p>
+			</div>
+			<button class="scroll-up-button" onclick="scrollToTop()"><span class="skew-fix"></span></button>
+
+</main>
+<script src="c+js.js"></script>
+<footer>
+	<p>&copy; 2023 Your Website. All rights reserved.</p>
+</footer>
+</body>
+</html>
+

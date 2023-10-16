@@ -1,0 +1,120 @@
+<html><head>
+	<title>Arrays in Python</title>
+	<link rel="stylesheet" href="stylepython.css">
+	<script src="scriptpython.js"></script>
+	</head>
+	<body>
+		<header>
+		<a href = "python page.html" > <img src="logo.jpg" alt="Logo" class="logo"  width="125" height="40"></a>
+		<div class="search-container">
+			<input type="text" id="search-input" name="q" placeholder="Search..."onkeypress="handleKeyPress(event)">
+			<button type="button"  onclick="searchSiteOrGoogle()"><span class="skew-fix">Search</span></button>
+		</div>
+	</header>
+		
+	<nav>
+		<ul class="menu cf">
+			<li><a href="home.html">Home</a></li>
+			<li><a href="arrayp.html">Arrays</a></li>
+			<li><a href="stringsp.html">Strings</a></li>
+			<li><a href="functionsp.html">Functions</a></li>
+			<li><a href="filehandlingp.html">File Handling</a></li>
+			<li><a href="datastructurep.html">Data Structures</a></li>
+			<li><a href="operatorsp.html">Operators in Python</a></li>
+		</ul>
+	</nav>
+	
+	<main>
+		<div class="left-content">
+			<h2>Categories</h2>
+			<ul>
+				<li><a href="introductionp.html">Introduction</a></li>
+				<li><a href="Datatypesp.html">Data Types</a></li>
+				<li><a href="listsp.html">Lists</a></li>
+				<li><a href="arrayp.html">Array</a></li>
+				<li><a href="stringsp.html">Strings</a></li>
+				<li><a href="userinputp.html">User Input in Python</a></li>
+				<li><a href="tuplesp.html">Tuples</a></li>
+				<li><a href="setsp.html">Sets</a></li>
+				<li><a href="dictionariesp.html">Dictionaries</a></li>
+				<li><a href="ifelsep.html">If-Else Statements in Python</a></li>
+				<li><a href="forp.html">For Loops in Python</a></li>
+				<li><a href="whilep.html">While Loops in Python</a></li>
+			</ul>
+		</div>
+	<div class="right-content">
+		<h1>Arrays in Python</h1><br><br>
+		<p>In Python, an array is a collection of elements of the same data type. Unlike lists, arrays are fixed in size and cannot be resized once created. Python doesn't have built-in support for arrays, but we can use the array module to create and manipulate arrays.</p>
+		<p>To use the array module, we first need to import it:</p>
+		<pre><code>import array</code></pre>
+		<p>We can then create an array by specifying the data type and initializing the values:</p>
+		<pre><code>my_array = array.array('i', [1, 2, 3, 4, 5])</code></pre>
+		<p>In this example, we have created an array of integers ('i') with the values 1, 2, 3, 4, and 5.</p>
+		<p>Here are some common data types that can be used with arrays:</p>
+		<ul class="pre">
+			<li>'b': signed integer (1 byte)</li>
+			<li>'B': unsigned integer (1 byte)</li>
+			<li>'h': signed integer (2 bytes)</li>
+			<li>'H': unsigned integer (2 bytes)</li>
+			<li>'i': signed integer (4 bytes)</li>
+			<li>'I': unsigned integer (4 bytes)</li>
+			<li>'f': floating point (4 bytes)</li>
+			<li>'d': floating point (8 bytes)</li>
+		</ul>
+		<p>Arrays in Python have several advantages over lists. Since arrays are of a fixed size, they are more memory-efficient than lists. Also, since all elements in an array are of the same data type, they can be processed more efficiently by the computer's CPU.</p>
+		<h3>Examples</h3>
+		<p>Here are some examples of common operations on arrays in Python:</p>
+		<ul class="pre"><pre><code># Accessing elements in an array
+	my_array = array.array('i', [1, 2, 3, 4, 5])
+	print(my_array[0]) # Output: 1
+	print(my_array[2]) # Output: 3
+	Inserting elements into an array
+	my_array.insert(2, 6)
+	print(my_array) # Output: array('i', [1, 2, 6, 3, 4, 5])
+
+	Removing elements from an array
+	my_array.remove(3)
+	print(my_array) # Output: array('i', [1, 2, 6, 4, 5])
+
+	Slicing an array
+	sliced_array = my_array[1:4]
+	print(sliced_array) # Output: array('i', [2, 6, 4])
+
+	Sorting an array
+	my_array = array.array('i', [4, 1, 3, 2])
+	my_array.sort()
+	print(my_array) # Output: array('i', [1, 2, 3, 4])</code></pre></ul>
+	<p>In conclusion, arrays in Python are fixed-size collections of elements of the same data type. They can be more memory-efficient than lists and can be processed more efficiently by the CPU. The array module provides several functions for creating and manipulating arrays in Python.</p>
+  
+  <br><p>Creating an array:</p><br>
+  <ul class="pre"><pre><code>import array
+a = array.array('i', [1, 2, 3, 4, 5])</code></pre></ul>
+  
+  <br><p>Adding an element to the end of the array:</p><br>
+  <ul class="pre"><pre><code>a.append(6)</code></pre></ul>
+  
+  <br><p>Adding the elements of another array to the end of the array:</p><br>
+  <ul class="pre"><pre><code>b = array.array('i', [7, 8, 9])
+	a.extend(b)</code></pre></ul>
+	
+	<br><p>Inserting an element at a specific index:</p><br>
+	<ul class="pre"><pre><code>a.insert(0, 0)</code></pre></ul>
+
+	<br><p>Removing the last element of the array:</p><br>
+	<ul class="pre"><pre><code>a.pop()</code></pre></ul>
+
+	<br><p>Removing the first occurrence of an element:</p><br>
+	<ul class="pre"><pre><code>a.remove(3)</code></pre></ul>
+
+	<br><p>Reversing the order of the elements:</p><br>
+	<ul class="pre"><pre><code>a.reverse()</code></pre></ul>
+
+	<br><p>Sorting the elements in ascending order:</p><br>
+	<ul class="pre"><pre><code>a.sort()</code></pre></ul>
+
+	<br><p>Sorting the elements in descending order:</p><br>
+	<ul class="pre"><pre><code>a.sort(reverse=True)</code></pre></ul>
+	</div>
+</main>
+
+</body></html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> C++ Arrays </title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+	<a href="home.html">
+	<img src="logo.jpg" alt="Logo" class="logo" width="125" height="40">
+	</a>
+	<div class="search-container">
+		<form action="/search">
+			<label for="search-input"> </label>
+			<input type="text" id="search-input" name="q" placeholder="Search..." onkeypress="handleKeyPress(event)">
+			<button type="button" class="search-button" onclick="searchSiteOrGoogle()"><span class="skew-fix">Search</span></button>
+		</form>
+	</div>
+</header>
+	
+<nav>
+	<ul class="menu cf">
+		<li><a href="home.html">Home</a></li>
+		<li><a href="c++ array.html">Arrays</a></li>
+		<li><a href="home.html">Strings</a></li>
+		<li><a href="c++ functions.html">Functions</a></li>
+		<li><a href="home.html">File Handling</a></li>
+		<li><a href="home.html">Data Structures</a></li>
+		<li><a href="pointers.html">Pointers</a></li>
+		<li><a href="home.html">C++ Programs</a></li>
+	</ul>
+</nav>
+
+<main>
+	<div class="left-content">
+		<h2>Categories</h2>
+		<ul>
+			<li><a href="c++ Tutorial.html">C++ Tutorial</a></li>
+			<li><a href="control statement.html">C++ Control Statement</a></li>
+			<li><a href="c++ functions.html">C++ Functions</a></li>
+			<li><a href="c++ array.html">C++ Arrays</a></li>
+			<li><a href="pointers.html">C++ Pointers</a></li>
+			<li><a href="object class.html">C++ Object Class</a></li>
+			<li><a href="c++ inheritance.html">C++ Inheritance</a></li>
+			<li><a href="c++ polymorphism.html">C++ Polymorphism</a></li>
+			<li><a href="#">C++ Abstraction</a></li>
+			<li><a href="#">C++ Strings</a></li>
+			<li><a href="#">Signal Handling</a></li>
+			<li><a href="#">C++ Exception Handling</a></li>
+			<li><a href="#">C++ Templates</a></li>
+			<li><a href="#">C++ Standard Template Library (STL)</a></li>
+			<li><a href="#">C++ Multi-Threading</a></li>
+			<li><a href="#">C++ File Handling</a></li>
+			<li><a href="#">C++ Graphics</a></li>
+			<li><a href="#">C++ Networking</a></li>
+			<li><a href="#">C++ Data Structures</a></li>
+			<li><a href="#">C++ Templates</a></li>
+			<li><a href="#">C++ File Handling</a></li>
+			<li><a href="#">C++ Smart Pointers</a></li>
+			<li><a href="#">C++ Multithreading</a></li>
+			<li><a href="#">C++ Network Programming</a></li>
+	
+	</ul>
+	</div>
+	<div class="right-content">
+        <h2>Arrays in C++</h2>
+			<p>
+				In C++, an array is a collection of elements of the same type, stored in contiguous memory locations.
+				Arrays are useful when you want to store multiple values of the same data type and access them using an index.
+			</p>
+			<h1>C++ Array Examples</h1>
+			<h3>Example 1:declaring and accessing elements of an array in C++:</h3>
+			<pre>
+				<code>
+					#include &lt;iostream&gt;
+
+					int main() {
+						// Declare an array of integers
+						int numbers[5];
+
+						// Assign values to the elements
+						numbers[0] = 10;
+						numbers[1] = 20;
+						numbers[2] = 30;
+						numbers[3] = 40;
+						numbers[4] = 50;
+
+						// Access and print the elements
+						for (int i = 0; i &lt; 5; i++) {
+							std::cout &lt;&lt; "Element at index " &lt;&lt;
+							 i &lt;&lt; ": " &lt;&lt; numbers[i] &lt;&lt; std::endl;
+						}
+
+						return 0;
+					}
+				</code>
+			</pre>
+			<p>
+				The above code declares an integer array named "numbers" with a size of 5. It assigns values to each element of the array and then uses a loop to access and print the elements.
+			</p>
+			<p>
+				The output of the above code will be:
+			</p>
+			<pre>
+				<code>
+					Element at index 0: 10
+					Element at index 1: 20
+					Element at index 2: 30
+					Element at index 3: 40
+					Element at index 4: 50
+				</code>
+			</pre>
+			<p>
+				Arrays in C++ provide a convenient way to store and manipulate collections of data. They can be used in various scenarios such as storing a list of numbers, characters, or objects.
+			</p>
+			<p>
+				For more details and advanced operations on arrays in C++, you can refer to the <a href="interview question.html">C++ Arrays Documentation</a>.
+			</p>
+			<br><br>
+			<h3>Example 2: Declaring and Accessing Array Elements</h3>
+				<pre>
+					<code>
+					#include <iostream>
+
+					int main() {
+						// Declare and initialize an array
+						int numbers[] = {1, 2, 3, 4, 5};
+
+						// Accessing array elements
+						std::cout << "First element: " << numbers[0] << std::endl;
+						std::cout << "Second element: " << numbers[1] << std::endl;
+
+						return 0;
+					}		
+					</code>
+				</pre>
+
+			<h3>Example 3: Modifying Array Elements</h3>
+				<pre>
+					<code>
+							#include <iostream>
+							int main() {
+								int numbers[] = {1, 2, 3, 4, 5};
+
+								// Modifying array elements
+								numbers[2] = 10;
+
+								// Printing array elements
+								std::cout << "Array elements: ";
+								for (int i = 0; i < 5; i++) {
+									std::cout << numbers[i] << " ";
+								}
+								std::cout << std::endl;
+
+								return 0;
+							}
+					</code>
+				</pre>
+
+			<h3>Example 4: Array Length and Iteration</h3>
+				<pre>
+					<code>
+							#include <iostream>
+
+							int main() {
+								int numbers[] = {1, 2, 3, 4, 5};
+								int length = sizeof(numbers) / sizeof(numbers[0]);
+
+								// Iterating through the array
+								std::cout << "Array elements: ";
+								for (int i = 0; i < length; i++) {
+									std::cout << numbers[i] << " ";
+								}
+								std::cout << std::endl;
+
+								return 0;
+							}
+					</code>
+				</pre>
+
+				<button class="scroll-up-button" onclick="scrollToTop()"><span class="skew-fix"></span></button>
+		</div>
+</main>
+<script src="c+js.js"></script>
+<footer>
+	<p>&copy; 2023 Your Website. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

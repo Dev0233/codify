@@ -1,0 +1,134 @@
+<html><head>
+	<title>Sets in Python</title>
+	<link rel="stylesheet" href="stylepython.css">
+	<script src="scriptpython.js"></script>
+	</head>
+	<body>
+		<header>
+		<a href = "python page.html" > <img src="logo.jpg" alt="Logo" class="logo" width="125" height="40"></a>
+		<div class="search-container">
+			<input type="text" id="search-input" name="q" placeholder="Search..."onkeypress="handleKeyPress(event)">
+			<button type="button"  onclick="searchSiteOrGoogle()"><span class="skew-fix">Search</span></button>
+		</div>
+	</header>
+		
+	<nav>
+		<ul class="menu cf">
+			<li><a href="home.html">Home</a></li>
+			<li><a href="arrayp.html">Arrays</a></li>
+			<li><a href="stringsp.html">Strings</a></li>
+			<li><a href="functionsp.html">Functions</a></li>
+			<li><a href="filehandlingp.html">File Handling</a></li>
+			<li><a href="datastructurep.html">Data Structures</a></li>
+			<li><a href="operatorsp.html">Operators in Python</a></li>
+		</ul>
+	</nav>
+	
+	<main>
+		<div class="left-content">
+			<h2>Categories</h2>
+			<ul>
+				<li><a href="introductionp.html">Introduction</a></li>
+				<li><a href="Datatypesp.html">Data Types</a></li>
+				<li><a href="listsp.html">Lists</a></li>
+				<li><a href="arrayp.html">Array</a></li>
+				<li><a href="stringsp.html">Strings</a></li>
+				<li><a href="userinputp.html">User Input in Python</a></li>
+				<li><a href="tuplesp.html">Tuples</a></li>
+				<li><a href="setsp.html">Sets</a></li>
+				<li><a href="dictionariesp.html">Dictionaries</a></li>
+				<li><a href="ifelsep.html">If-Else Statements in Python</a></li>
+				<li><a href="forp.html">For Loops in Python</a></li>
+				<li><a href="whilep.html">While Loops in Python</a></li>
+			</ul>
+		</div>
+    <div class="right-content">
+		<h1>Sets in Python</h1><br><br>
+    	<p>In Python, a set is an unordered collection of unique elements. Sets are defined by enclosing a comma-separated sequence of values in curly braces <code>{}</code>.</p>
+		<br><br><h2>Creating a Set</h2><br><br>
+<p>Here's an example of how to create a set in Python:</p>
+<ul class="pre"><pre><code>my_set = {1, 2, 3, 4, 5}</code></pre></ul>
+<p>In this example, we define a set <code>my_set</code> that contains the integers 1 through 5.</p><br><br>
+
+<h3>Set Properties</h3><br><br>
+<p>Sets in Python have several useful properties, including:</p>
+<ul class="pre">
+  <li><strong>Uniqueness:</strong> Sets contain only unique elements, meaning that there are no duplicates. If we try to add a duplicate element to a set, it will simply be ignored.</li>
+  <li><strong>Order:</strong> Sets are unordered, meaning that the elements of a set have no specific order. We cannot access elements of a set by index.</li>
+  <li><strong>Mutable:</strong> Sets are mutable, meaning that we can add and remove elements from a set after it has been created.</li>
+</ul>
+
+<br><br><h3>Working with Sets</h3><br><br>
+<p>Here are some examples of working with sets in Python:</p>
+<ul class="pre">
+<pre><code>my_set = {1, 2, 3, 4, 5}
+	Adding elements to a set
+	my_set.add(6)
+	my_set.add(7)
+	
+	Removing elements from a set
+	my_set.remove(4)
+	
+	Checking if an element is in a set
+	print(3 in my_set) # Output: True
+	
+	Iterating over a set
+	for element in my_set:
+	print(element)
+	</code></pre>
+</ul>
+	<p>In this example, we first create a set <code>my_set</code> containing the integers 1 through 5. We then add the integers 6 and 7 to the set using the <code>add()</code> method. We remove the element 4 from the set using the <code>remove()</code> method. We then check if the element 3 is in the set using the <code>in</code> operator. Finally, we iterate over the set using a <code>for</code> loop and print each element.</p>
+	<br><br><h2>Set Operations</h2><br><br>
+	<p>Python sets also support several set operations, such as union, intersection, and difference. Here are some examples:</p>
+	<ul class="pre"><pre><code>set1 = {1, 2, 3}
+		set2 = {2, 3, 4}
+
+		Union
+		print(set1 | set2) # Output: {1, 2, 3, 4}
+		
+		Intersection
+		print(set1 & set2) # Output: {2, 3}
+		
+		Difference
+		print(set1 - set2) # Output: {1}
+		</code></pre></ul>
+		<p>In this example, we define two sets <code>set1</code> and <code>set2</code> containing some overlapping elements. We then compute the union of the sets using the <code>|</code> operator, which combines all the unique elements of both sets. We compute the intersection of the sets using the <code>&</code> operator, which returns only the elements that are common to both sets. We compute the difference of the sets using the <code>-</code> operator, which returns only the elements that are in <code>set1</code> but not in <code>set2</code>.</p>
+		<h2>Set Functions</h2>
+		<p>Python sets also have several useful built-in functions:</p>
+		<ul class="pre">
+			<li><strong>len():</strong> Returns the number of elements in a set.</li>
+			<li><strong>max():</strong> Returns the largest element in a set (if the elements are numeric).</li>
+			<li><strong>min():</strong> Returns the smallest element in a set (if the elements are numeric).</li>
+			<li><strong>sum():</strong> Returns the sum of the elements in a set (if the elements are numeric).</li>
+		</ul>
+		<p>Here are some examples of using these functions:</p>
+		<ul class="pre">
+         <pre><code># Creating two sets
+          set1 = {1, 2, 3}
+          set2 = {3, 4, 5}
+          
+          # Union of set1 and set2
+          print(set1.union(set2)) # Output: {1, 2, 3, 4, 5}
+          
+          # Intersection of set1 and set2
+          print(set1.intersection(set2)) # Output: {3}
+          
+          # Difference of set1 and set2
+          print(set1.difference(set2)) # Output: {1, 2}
+          
+          set3 = set1 &#124; set2  # union
+          set4 = set1 & set2  # intersection
+          set5 = set1 - set2  # difference
+          set6 = set1 ^ set2  # symmetric difference
+          
+          print(set3)  # {1, 2, 3, 4}
+          print(set4)  # {2, 3}
+          print(set5)  # {1}
+          print(set6)  # {1, 4}</code></pre></ul>
+          </div>
+          
+          
+    </div>
+            
+</main>
+</body></html>

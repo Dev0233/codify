@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>C++ Polymorphism</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+	<a href="home.html">
+	<img src="logo.jpg" alt="Logo" class="logo" width="125" height="40">
+	</a>
+	<div class="search-container">
+		<form action="/search">
+			<label for="search-input"> </label>
+			<input type="text" id="search-input" name="q" placeholder="Search..." onkeypress="handleKeyPress(event)">
+			<button type="button" class="search-button" onclick="searchSiteOrGoogle()"><span class="skew-fix">Search</span></button>
+		</form>
+	</div>
+</header>
+	
+<nav>
+	<ul class="menu cf">
+		<li><a href="home.html">Home</a></li>
+		<li><a href="c++ array.html">Arrays</a></li>
+		<li><a href="home.html">Strings</a></li>
+		<li><a href="c++ functions.html">Functions</a></li>
+		<li><a href="home.html">File Handling</a></li>
+		<li><a href="home.html">Data Structures</a></li>
+		<li><a href="pointers.html">Pointers</a></li>
+		<li><a href="home.html">C++ Programs</a></li>
+	</ul>
+</nav>
+
+<main>
+	<div class="left-content">
+		<h2>Categories</h2>
+		<ul>
+        <li><a href="c++ page.html">C++ Tutorial</a></li>
+        <li><a href="control statement.html">C++ Control Statement</a></li>
+        <li><a href="c++ functions.html">C++ Functions</a></li>
+        <li><a href="c++ array.html">C++ Arrays</a></li>
+        <li><a href="pointers.html">C++ Pointers</a></li>
+        <li><a href="object class.html">C++ Object Class</a></li>
+        <li><a href="c++ inheritance.html">C++ Inheritance</a></li>
+        <li><a href="c++ polymorphism.html">C++ Polymorphism</a></li>
+        <li><a href="#">C++ Abstraction</a></li>
+        <li><a href="#">C++ Strings</a></li>
+        <li><a href="#">Signal Handling</a></li>
+        <li><a href="#">C++ Exception Handling</a></li>
+        <li><a href="#">C++ Templates</a></li>
+        <li><a href="#">C++ Standard Template Library (STL)</a></li>
+        <li><a href="#">C++ Multi-Threading</a></li>
+        <li><a href="#">C++ File Handling</a></li>
+        <li><a href="#">C++ Graphics</a></li>
+        <li><a href="#">C++ Networking</a></li>
+        <li><a href="#">C++ Data Structures</a></li>
+        <li><a href="#">C++ Templates</a></li>
+        <li><a href="#">C++ File Handling</a></li>
+        <li><a href="#">C++ Standard Template Library (STL)</a></li>
+        <li><a href="#">C++ Smart Pointers</a></li>
+        <li><a href="#">C++ Multithreading</a></li>
+        <li><a href="#">C++ Network Programming</a></li>
+
+	</ul>
+	</div>
+	<div class="right-content">
+        <h2>C++ Polymorphism</h2>
+        <p>Polymorphism is one of the fundamental concepts in object-oriented programming (OOP). It allows objects of different classes to be treated as objects of a common base class, providing flexibility and extensibility in your code. In C++, polymorphism is achieved through:</p>
+        <ul>
+            <li>Function overloading</li>
+            <li>Operator overloading</li>
+            <li>Virtual functions</li>
+        </ul>
+        <h2>Function Overloading</h2>
+        <p>Function overloading allows multiple functions with the same name but different parameter lists to coexist. The appropriate function is called based on the number, type, and order of the arguments. Here's an example:</p>
+        <pre><code class="language-cpp">
+                #include <iostream>
+                using namespace std;
+                class Calculator {
+                public:
+                int add(int a, int b) {
+                return a + b;
+                }
+                double add(double a, double b) {
+                    return a + b;
+                }
+
+                int main() {
+                Calculator calc;
+                int sum1 = calc.add(3, 5);
+                double sum2 = calc.add(3.5, 5.7);
+                cout << "Sum 1: " << sum1 << endl;
+                cout << "Sum 2: " << sum2 << endl;
+
+                return 0;
+            }
+            </code></pre>
+            <p>In this example, the addfunction is overloaded to handle both integers and doubles. Depending on the argument types, the appropriate version of the function is called.</p>
+            <h2>Operator Overloading</h2>
+            <p>Operator overloading allows you to redefine the behavior of built-in operators for user-defined types. It enables you to perform custom operations on objects using familiar syntax. Here's an example of operator overloading for a custom Vector class:</p>
+            <pre><code class="language-cpp">
+            #include <iostream>
+            using namespace std;
+            
+            class Vector {
+            public:
+            int x, y;
+            Vector(int a, int b) {
+                x = a;
+                y = b;
+            }
+            
+            Vector operator+(const Vector& other) {
+                int newX = x + other.x;
+                int newY = y + other.y;
+                return Vector(newX, newY);
+            }
+
+            int main() {
+            Vector v1(3, 5);
+            Vector v2(2, 7);
+            Vector sum = v1 + v2;
+            cout << "Sum: (" << sum.x << ", " << sum.y << ")" << endl;
+
+            return 0;
+        }
+            </code></pre>
+            <p>In this example, the operator is overloaded for the Vector class, allowing you to add two Vector objects together using the familiar syntax.</p>
+            <h2>Virtual Functions</h2>
+            <p>Virtual functions are a key feature of polymorphism in C++. They allow a function in a base class to be overridden in a derived class, enabling different behaviors based on the actual object type. Here's an example:</p>
+            <pre><code class="language-cpp">
+            #include <iostream>
+            using namespace std;
+            
+            class Shape {
+            public:
+            virtual void draw() {
+            cout << "Drawing a shape." << endl;
+            }
+            };
+            
+            class Circle : public Shape {
+            public:
+            void draw() override {
+            cout << "Drawing a circle." << endl;
+            }
+            };
+            
+            class Square : public Shape {
+            public:
+            void draw() override {
+            cout << "Drawing a square." << endl;
+            }
+            };
+            
+            int main() {
+            Shape* shape1 = new Circle();
+            Shape* shape2 = new Square();
+            shape1->draw();
+            shape2->draw();
+
+            delete shape1;
+            delete shape2;
+
+            return 0;
+        }
+            </code></pre>
+            <p>In this example, the Shapeclass has a virtual draw function, which is overridden in the derived classes Circle and Square. When calling the draw function on a base class pointer, the appropriate version of the function is called based on the actual object type.</p>
+            </div>
+			<button class="scroll-up-button" onclick="scrollToTop()"><span class="skew-fix"></span></button>
+
+</main>
+<script src="c+js.js"></script>
+<footer>
+	<p>&copy; 2023 Your Website. All rights reserved.</p>
+</footer>
+</body>
+</html>
+

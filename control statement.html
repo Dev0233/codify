@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> control statements </title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<a href="home.html">
+	<img src="logo.jpg" alt="Logo" class="logo" width="125" height="40">
+		</a>
+	<div class="search-container">
+		<form action="/search">
+			<label for="search-input"> </label>
+			<input type="text" id="search-input" name="q" placeholder="Search..." onkeypress="handleKeyPress(event)">
+			<button type="button" class="search-button"  onclick="searchSiteOrGoogle()"><span class="skew-fix">Search</span></button>
+		</form>
+	</div>
+</header>
+	
+<nav>
+	<ul class="menu cf">
+		<li><a href="home.html">Home</a></li>
+		<li><a href="c++ array.html">Arrays</a></li>
+		<li><a href="home.html">Strings</a></li>
+		<li><a href="c++ functions.html">Functions</a></li>
+		<li><a href="home.html">File Handling</a></li>
+		<li><a href="home.html">Data Structures</a></li>
+		<li><a href="pointers.html">Pointers</a></li>
+		<li><a href="home.html">C++ Programs</a></li>
+</nav>
+
+<main>
+	<div class="left-content">
+		<h2>Categories</h2>
+		<ul>
+        <li><a href="c++ Tutorial.html">C++ Tutorial</a></li>
+        <li><a href="control statement.html">C++ Control Statement</a></li>
+        <li><a href="c++ functions.html">C++ Functions</a></li>
+        <li><a href="c++ array.html">C++ Arrays</a></li>
+        <li><a href="pointers.html">C++ Pointers</a></li>
+        <li><a href="object class.html">C++ Object Class</a></li>
+        <li><a href="c++ inheritance.html">C++ Inheritance</a></li>
+        <li><a href="c++ polymorphism.html">C++ Polymorphism</a></li>
+        <li><a href="#">C++ Abstraction</a></li>
+        <li><a href="#">C++ Strings</a></li>
+        <li><a href="#">Signal Handling</a></li>
+        <li><a href="#">C++ Exception Handling</a></li>
+        <li><a href="#">C++ Templates</a></li>
+        <li><a href="#">C++ Standard Template Library (STL)</a></li>
+        <li><a href="#">C++ Multi-Threading</a></li>
+        <li><a href="#">C++ File Handling</a></li>
+        <li><a href="#">C++ Graphics</a></li>
+        <li><a href="#">C++ Networking</a></li>
+        <li><a href="#">C++ Data Structures</a></li>
+        <li><a href="#">C++ Templates</a></li>
+        <li><a href="#">C++ File Handling</a></li>
+        <li><a href="#">C++ Standard Template Library (STL)</a></li>
+        <li><a href="#">C++ Smart Pointers</a></li>
+        <li><a href="#">C++ Multithreading</a></li>
+        <li><a href="#">C++ Network Programming</a></li>
+
+	</ul>
+	</div>
+	<div class="right-content">
+        <h2>C++ Control Statements</h2>
+		<p>Control statements are an essential part of programming, allowing the programmer to make decisions and execute code based on those decisions. There are three types of control statements in C++:</p>
+		<ul>
+			<li>Conditional statements</li>
+			<li>Loop statements</li>
+			<li>Jump statements</li>
+		</ul>
+		<h3>Conditional Statements</h3>
+		<p>Conditional statements execute code based on the evaluation of a boolean expression. The most common conditional statements in C++ are:</p>
+		<ul>
+			<li>if statement</li>
+			<li>if-else statement</li>
+			<li>switch statement</li>
+		</ul>
+		<h3>if Statement</h2>
+		<p>The if statement is used to execute code if a condition is true:</p>
+			<pre><code class="language-cpp">
+            if (condition) {
+                // code to execute if condition is true
+            }
+            </code></pre>
+        <h3>Example: if Statement</h3>
+        <p>Here's an example of an if statement that prints "Hello World" if a variable x is equal to 1:</p>
+                <pre><code class="language-cpp">
+            #include &lt;iostream&gt;
+            using namespace std;
+            
+            int main() 
+            {
+                int x = 1;
+                if (x == 1) {
+                cout << "Hello World";
+            }
+                return 0;
+            }
+                </code></pre>
+        <h3>if-else Statement</h3>
+        <p>The if-else statement is used to execute code if a condition is true, and different code if the condition is false:</p>
+                <pre><code class="language-cpp">
+                if (condition) {
+                    // code to execute if condition is true
+                } 
+                else {
+                // code to execute if condition is false
+                }
+            </code></pre>
+        <h3>Example: if-else Statement</h3>
+        <p>Here's an example of an if-else statement that prints "Hello World" if a variable x is equal to 1, and "Goodbye World" if x is not equal to 1:</p>
+            <pre><code class="language-cpp">
+                #include <iostream>
+                using namespace std;
+            
+                int main() 
+                {
+                    int x = 2;
+                    if (x == 1) 
+                    {
+                        cout << "Hello World";
+                    }
+                    else 
+                    {
+                        cout << "Goodbye World";
+                    }
+                return 0;
+                }
+            </code></pre>
+        <h3>switch Statement</h3>
+        <p>The switch statement is used to execute different code based on the value of a variable:</p>
+            <pre><code class="language-cpp">
+            switch (variable) 
+            {
+                case value1:
+                    // code to execute if variable is equal to value1
+                    break;
+                case value2:
+                    // code to execute if variable is equal to value2
+                    break;
+                default:
+                    // code to execute if variable is not equal to any of the values
+            }
+		</code></pre>
+        <h3>Example: switch Statement</h3>
+        <p>Here's an example of a switch statement that prints a message based on the value of a var x:</p>
+            <pre><code class="language-cpp">
+                #include <iostream>
+                using namespace std;
+            
+                int main() 
+                {
+                    int x = 2;
+                    switch(x) {
+                    case 1:
+                        cout << "x is equal to 1";
+                        break;
+                    case 2:
+                        cout << "x is equal to 2";
+                        break;
+                    default:
+                        cout << "x is not equal to 1 or 2";
+                        break;
+                        }
+                    return 0;
+                }
+    	</code></pre>
+		<h3>Example:</h3>
+		<p>The switch statement in C++ is a type of conditional statement that allows you to choose between several options based on the value of a single variable. Here is an example of a switch statement:</p>
+			<pre><code>
+				switch(day) {
+					case 1:
+						cout << "Monday" << endl;
+						break;
+					case 2:
+						cout << "Tuesday" << endl;
+						break;
+					case 3:
+						cout << "Wednesday" << endl;
+						break;
+					default:
+						cout << "Invalid day" << endl;
+						break;
+					}
+			</code></pre>
+	    <p>In this example, the variable "day" is being tested against three possible values using the switch statement. If "day" is equal to 1, the code inside the first case block will execute. If "day" is equal to 2, the code inside the second case block will execute. If "day" is equal to 3, the code inside the third case block will execute. If "day" does not match any of the cases, the code inside the default block will execute.</p>
+		<p>The break statement is used after each case to prevent the code from falling through to the next case. If the break statement is not used, all the code after the matching case will execute until a break statement or the end of the switch statement is reached.</p>
+            
+        </div>  
+        <button class="scroll-up-button" onclick="scrollToTop()"><span class="skew-fix"></span></button>           
+    </main>
+<script src="c+js.js"></script>
+</body>
+</html>
+            

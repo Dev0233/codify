@@ -1,0 +1,153 @@
+<html><head>
+	<title>Python Functions</title>
+	<link rel="stylesheet" href="stylepython.css">
+	<script src="scriptpython.js"></script>
+	</head>
+	<body>
+		<header>
+		<a href = "python page.html" > <img src="logo.jpg" alt="Logo" class="logo" width="125" height="40"></a>
+		<div class="search-container">
+			<input type="text" id="search-input" name="q" placeholder="Search..."onkeypress="handleKeyPress(event)">
+			<button type="button"  onclick="searchSiteOrGoogle()"><span class="skew-fix">Search</span></button>
+		</div>
+	</header>
+		
+	<nav>
+		<ul class="menu cf">
+			<li><a href="home.html">Home</a></li>
+			<li><a href="arrayp.html">Arrays</a></li>
+			<li><a href="stringsp.html">Strings</a></li>
+			<li><a href="functionsp.html">Functions</a></li>
+			<li><a href="filehandlingp.html">File Handling</a></li>
+			<li><a href="datastructurep.html">Data Structures</a></li>
+			<li><a href="operatorsp.html">Operators in Python</a></li>
+		</ul>
+	</nav>
+	
+	<main>
+		<div class="left-content">
+			<h2>Categories</h2>
+			<ul>
+				<li><a href="introductionp.html">Introduction</a></li>
+				<li><a href="Datatypesp.html">Data Types</a></li>
+				<li><a href="listsp.html">Lists</a></li>
+				<li><a href="arrayp.html">Array</a></li>
+				<li><a href="stringsp.html">Strings</a></li>
+				<li><a href="userinputp.html">User Input in Python</a></li>
+				<li><a href="tuplesp.html">Tuples</a></li>
+				<li><a href="setsp.html">Sets</a></li>
+				<li><a href="dictionariesp.html">Dictionaries</a></li>
+				<li><a href="ifelsep.html">If-Else Statements in Python</a></li>
+				<li><a href="forp.html">For Loops in Python</a></li>
+				<li><a href="whilep.html">While Loops in Python</a></li>
+			</ul>
+		</div>
+	<div class="right-content">
+        <h1>Python Functions</h1><br><br>
+  <p>In Python, a function is a block of reusable code that performs a specific task. It helps organize code into logical units, promotes code reusability, and makes programs easier to read and maintain.</p>
+  <p>Functions in Python are defined using the <code>def</code> keyword followed by the function name, parentheses <code>()</code>, and a colon <code>:</code>.</p>
+  <p>Here's the general syntax of a function:</p>
+  <ul class="pre"><pre><code>def function_name(parameters):
+    """Optional docstring"""
+    # Function body (statements)
+    # ...
+    return value  # Optional return statement
+  </code></pre></ul>
+  <p>Let's break down the different components of a function:</p>
+  <br><br><h3>Function name:</h3><br><br> <p>This is the identifier for the function. It should follow the same naming conventions as variables (e.g., lowercase with words separated by underscores).</p>
+  <br><br><h3>Parameters:</h3><br><br><p> Parameters are optional inputs that a function can accept. They are defined inside the parentheses <code>()</code> after the function name. Multiple parameters can be separated by commas. These parameters act as local variables within the function and are used to pass values to the function for processing.</p>
+  <br><br><h3>Docstring (optional):</h3><br><br> <p>A docstring is a string enclosed in triple quotes (<code>"""</code>) that provides documentation for the function. It describes what the function does, explains its purpose, and provides information about its parameters and return value. Although optional, it's good practice to include a docstring to make your code more understandable and maintainable.</p>>
+  <br><br><h3>Function body:</h3><br><br><p> The function body consists of one or more statements that are executed when the function is called. These statements define the logic and operations performed by the function. Proper indentation (typically four spaces or a tab) is essential to indicate the function's scope.</p>
+  <br><br><h3>Return statement (optional):</h3><br><br><p>The <code>return</code> statement is used to specify the value that the function should return. It allows the function to send data back to the caller. If no <code>return</code> statement is provided, the function implicitly returns <code>None</code>. Functions can have multiple <code>return</code> statements, but as soon as a <code>return</code> statement is encountered, the function execution terminates.</p>
+  <p>Once a function is defined, it can be called from anywhere in the program by using its name followed by parentheses <code>()</code> and passing the required arguments, if any.</p>
+  <p>Here's an example:</p>
+  <ul class="pre"><pre><code># Function definition
+def add_numbers(a, b):
+    """Adds two numbers and returns the result."""
+    return a + b
+
+# Function call
+result = add_numbers(2, 3)
+print(result)  
+
+# Output: 5
+  </code></pre></ul>
+  <p>In the above example, the function <code>add_numbers</code> accepts two parameters (<code>a</code> and <code>b</code>) and returns their sum. The function is called with arguments <code>2</code> and <code>3</code>, and the returned value <code>5</code> is assigned to the variable <code>result</code> and printed.</p>
+  <p>Functions in Python are powerful constructs that enable modular and reusable code, enhancing the maintainability and readability of your programs. They are a fundamental concept in programming and allow you to break down complex tasks into smaller, manageable pieces of code.</p>
+  <br><br><h2>Examples of Functions in Python</h2>
+  
+  <br><br><h3>Example 1: Addition Function</h3>
+  <ul class="pre"><pre><code>def add_numbers(a, b):
+    """Adds two numbers and returns the result."""
+    return a + b
+
+result = add_numbers(2, 3)
+print(result)  
+
+# Output: 5
+  </code></pre></ul> 
+  
+  <br><br><h3>Example 2: Factorial Function</h3>
+  <ul class="pre"><pre><code>def factorial(n):
+    """Calculates the factorial of a number."""
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+
+result = factorial(5)
+print(result)  
+
+# Output: 120
+  </code></pre></ul>
+  
+  <br><br><h3>Example 3: Greeting Function</h3>
+  <ul class="pre"><pre><code>def greet(name):
+    """Greets the person with the given name."""
+    print("Hello, " + name + "! How are you?")
+
+greet("Alice")  
+
+# Output: Hello, Alice! How are you?
+  </code></pre></ul>
+  
+  <br><br><h3>Example 4: Check Even or Odd</h3>
+  <ul class="pre"><pre><code>def check_even_odd(num):
+    """Checks if a number is even or odd."""
+    if num % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
+
+result = check_even_odd(7)
+print(result) 
+
+# Output: Odd
+  </code></pre></ul>
+  
+  <br><br><h3>Example 5: Calculate Average</h3>
+  <ul class="pre"><pre><code>def calculate_average(numbers):
+    """Calculates the average of a list of numbers."""
+    total = sum(numbers)
+    average = total / len(numbers)
+    return average
+
+result = calculate_average([4, 5, 6, 7, 8])
+print(result)  
+
+# Output: 6.0
+  </code></pre></ul>
+  
+  <br><br><h3>Example 6: Reverse String</h3>
+  <ul class="pre"><pre><code>def reverse_string(string):
+    """Reverses a given string."""
+    return string[::-1]
+
+result = reverse_string("Hello, World!")
+print(result) 
+
+# Output: "!dlroW ,olleH"
+  </code></pre></ul>
+    </div>
+</main>
+</body></html>

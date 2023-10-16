@@ -1,0 +1,168 @@
+<html><head>
+	<title>File Handling in Python</title>
+	<link rel="stylesheet" href="stylepython.css">
+	<script src="scriptpython.js"></script>
+	</head>
+	<body>
+		<header>
+		<a href = "home.html" > <img src="logo.jpg" alt="Logo" class="logo"  width="125" height="40"></a>
+		<div class="search-container">
+			<input type="text" id="search-input" name="q" placeholder="Search..."onkeypress="handleKeyPress(event)">
+			<button type="button"  onclick="searchSiteOrGoogle()"><span class="skew-fix">Search</span></button>
+		</div>
+	</header>
+		
+	<nav>
+		<ul class="menu cf">
+			<li><a href="home.html">Home</a></li>
+			<li><a href="arrayp.html">Arrays</a></li>
+			<li><a href="stringsp.html">Strings</a></li>
+			<li><a href="functionsp.html">Functions</a></li>
+			<li><a href="filehandlingp.html">File Handling</a></li>
+			<li><a href="datastructurep.html">Data Structures</a></li>
+			<li><a href="operatorsp.html">Operators in Python</a></li>
+		</ul>
+	</nav>
+	
+	<main>
+		<div class="left-content">
+			<h2>Categories</h2>
+			<ul>
+				<li><a href="introductionp.html">Introduction</a></li>
+				<li><a href="Datatypesp.html">Data Types</a></li>
+				<li><a href="listsp.html">Lists</a></li>
+				<li><a href="arrayp.html">Array</a></li>
+				<li><a href="stringsp.html">Strings</a></li>
+				<li><a href="userinputp.html">User Input in Python</a></li>
+				<li><a href="tuplesp.html">Tuples</a></li>
+				<li><a href="setsp.html">Sets</a></li>
+				<li><a href="dictionariesp.html">Dictionaries</a></li>
+				<li><a href="ifelsep.html">If-Else Statements in Python</a></li>
+				<li><a href="forp.html">For Loops in Python</a></li>
+				<li><a href="whilep.html">While Loops in Python</a></li>
+			</ul>
+		</div>
+	<div class="right-content">
+        <h1>File Handling in Python</h1><br><br>
+    <p>File handpng in Python refers to the abipty to work with files, such as reading from and writing to them. It allows you to interact with external files on your computer's file system, enabpng you to perform operations pke reading data from a file, writing data to a file, appending data to an existing file, and more. Python provides several built-in functions and methods for file handpng.</p>
+    
+    <br><br><h2>Opening a File</h2><br><br>
+    <p>Before you can perform any operations on a file, you need to open it. The <code>open()</code> function is used to open a file and returns a file object. It takes two parameters: the file path and the mode. The mode parameter specifies the purpose of opening the file, such as reading, writing, or both. Here's an example of opening a file in read mode:</p>
+    
+    <ul class="pre"><pre><code>file = open("filename.txt", "r")</code></pre></ul>
+    
+    <br><p>The mode can be:</p><br>
+    <ul class="pre">
+        <p><code>"r"</code>: Read mode (default), opens the file for reading.</p>
+        <p><code>"w"</code>: Write mode, opens the file for writing. If the file doesn't exist, it creates a new file. If it exists, it truncates the file to zero length.</p>
+        <p><code>"a"</code>: Append mode, opens the file for appending. If the file doesn't exist, it creates a new file.</p>
+        <p><code>"x"</code>: Exclusive creation mode, opens a file for exclusive creation. If the file already exists, the <code>open()</code> function will raise a <code>FileExistsError</code> exception.</p>
+        <p><code>"b"</code>: Binary mode, opens the file in binary mode (e.g., for image or video files).</p>
+        <p><code>"t"</code>: Text mode (default), opens the file in text mode.</p>
+    </ul>
+    
+    <br><br><h2>Performing File Operations</h2><br><br>
+    <p>Once you have opened a file, you can perform various operations on it based on your requirements. Here are some commonly used file operations:</p>
+    
+    <br><br><h3>Reading from a File:</h3> <p>You can use the <code>read()</code> method to read the entire content of a file or <code>readpne()</code> method to read a single pne at a time. Here's an example:</p>
+        <ul class="pre"><pre><code>content = file.read()  # Reads the entire file content
+pne = file.readpne()  # Reads a single pne</code></pre></ul>
+        
+        <h3>Writing to a File:</h3> <p>To write data to a file, you can use the <code>write()</code> method. It takes a string as an argument and writes the contents to the file. Here's an example:</p>
+        <ul class="pre"><pre><code>file.write("Hello, World!")  # Writes the given string to the file</code></pre></ul>
+        
+        <h3>Appending to a File:</h3> <p>If you want to add content to an existing file without overwriting its existing content, you can use the <code>write()</code> method with the append mode. Here's an example:</p>
+        <ul class="pre"><pre><code>file = open("filename.txt", "a")
+file.write("This will be appended.")</code></pre></ul>
+        
+        <h3>Closing a File:</h3><p> After you have finished working with a file, it's important to close it using the <code>close()</code> method to release the system resources associated with it. Here's an example:</p>
+        <ul class="pre"><pre><code>file.close()</code></pre></ul>
+    
+    <h2>Exception Handpng</h2>
+    <p>When working with files, it's a good practice to handle exceptions that may occur during file operations. Common exceptions include <code>FileNotFoundError</code>, <code>PermissionError</code>, and <code>IOError</code>. You can use <code>try</code> and <code>except</code> blocks to catch and handle these exceptions gracefully. Here's an example:</p>
+    
+    <ul class="pre"><pre><code>try:
+    file = open("filename.txt", "r")
+    # Perform file operations
+except FileNotFoundError:
+    print("File not found.")
+except IOError:
+    print("An error occurred while performing file operations.")
+finally:
+    file.close()  # Make sure to close the file, even if an exception occurs</code></pre></ul>
+    
+    <h2>Using the <code>with</code> Statement</h2>
+    <p>Instead of manually closing the file using the <code>close()</code> method, you can use the <code>with</code> statement. It automatically takes care of closing the file once the block of code is executed, even if an exception occurs. Here's an example:</p>
+
+    <ul class="pre"><pre><code>with open("filename.txt", "r") as file:
+    # Perform file operations</code></pre></ul>
+    
+    <p>When using the <code>with</code> statement, there is no need to exppcitly call the <code>close()</code> method.</p>
+    
+    <p>Remember to handle file-related exceptions appropriately and close the file after you have finished working with it to avoid resource leaks.</p>
+    
+    <p>This is a basic overview of file handpng in Python. There are more advanced techniques and functionapties available, such as working with CSV files, JSON files, using the <code>os</code> module for file and directory manipulation, and using pbraries pke <code>pickle</code> for object seriapzation.</p>
+    <br><br><h3>Example of file handling in python</h3><br>
+    <br><h4>1. Opening a File</h4><br>
+        <ul class="pre"><pre><code>
+            file = open('example.txt', 'r')
+        </code></pre></ul>
+        
+        <br><h4>2. Reading from a File using read()</h4><br>
+        <ul class="pre"><pre><code>
+            file = open('example.txt', 'r')
+            content = file.read()
+            print(content)
+            file.close()
+        </code></pre></ul>
+        
+        <br><h4>3. Reading from a File using readline()</h4><br>
+        <ul class="pre"><pre><code>
+            file = open('example.txt', 'r')
+            line = file.readline()
+            while line:
+                print(line)
+                line = file.readline()
+            file.close()
+        </code></pre></ul>
+        
+        <br><h4>4. Reading from a File using readlines()</h4><br>
+        <ul class="pre"><pre><code>
+            file = open('example.txt', 'r')
+            lines = file.readlines()
+            for line in lines:
+                print(line)
+            file.close()
+        </code></pre></ul>
+        
+        <br><h4>5. Writing to a File</h4><br>
+        <ul class="pre"><pre><code>
+            file = open('example.txt', 'w')
+            file.write('Hello, World!')
+            file.close()
+        </code></pre></ul>
+        
+        <br><h4>6. Appending to a File</h4><br>
+        <ul class="pre"><pre><code>
+            file = open('example.txt', 'a')
+            file.write('Hello, World!')
+            file.close()
+        </code></pre></ul>
+        
+        <br><h4>7. Closing a File using close()</h4><br>
+        <ul class="pre"><pre><code>
+            file = open('example.txt', 'r')
+            content = file.read()
+            print(content)
+            file.close()
+        </code></pre></ul>
+        
+        <br><h4>8. Context Managers using with statement</h4><br>
+        <ul class="pre"><pre><code>
+            with open('example.txt', 'r') as file:
+                content = file.read()
+                print(content)
+        </code></pre></ul>
+</div>
+</main>
+</body></html>

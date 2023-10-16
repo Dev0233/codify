@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> c++ introduction </title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<a href="home.html">
+	<img src="logo.jpg" alt="Logo" class="logo" width="125" height="40">
+		</a>
+	<div class="search-container">
+		<form action="/search">
+			<label for="search-input"> </label>
+			<input type="text" id="search-input" name="q" placeholder="Search..." onkeypress="handleKeyPress(event)">
+			<button type="button" class="search-button" onclick="searchSiteOrGoogle()"><span class="skew-fix">Search</span></button>
+		</form>
+	</div>
+</header>
+	
+<nav>
+	<ul class="menu cf">
+	<li><a href="home.html">Home</a></li>
+	<li><a href="c++ array.html">Arrays</a></li>
+    <li><a href="home.html">Strings</a></li>
+    <li><a href="c++ functions.html">Functions</a></li>
+    <li><a href="home.html">File Handling</a></li>
+    <li><a href="home.html">Data Structures</a></li>
+    <li><a href="pointers.html">Pointers</a></li>
+    <li><a href="home.html">C++ Programs</a></li>
+	</ul>
+</nav>
+
+<main>
+	<div class="left-content">
+		<h2>Categories</h2>
+		<ul>
+        <li><a href="c++ Tutorial.html">C++ Tutorial</a></li>
+        <li><a href="control statement.html">C++ Control Statement</a></li>
+        <li><a href="c++ functions.html">C++ Functions</a></li>
+        <li><a href="c++ array.html">C++ Arrays</a></li>
+        <li><a href="pointers.html">C++ Pointers</a></li>
+        <li><a href="object class.html">C++ Object Class</a></li>
+        <li><a href="c++ inheritance.html">C++ Inheritance</a></li>
+        <li><a href="c++ polymorphism.html">C++ Polymorphism</a></li>
+        <li><a href="#">C++ Abstraction</a></li>
+        <li><a href="#">C++ Strings</a></li>
+        <li><a href="#">Signal Handling</a></li>
+        <li><a href="#">C++ Exception Handling</a></li>
+        <li><a href="#">C++ Templates</a></li>
+        <li><a href="#">C++ Standard Template Library (STL)</a></li>
+        <li><a href="#">C++ Multi-Threading</a></li>
+        <li><a href="#">C++ File Handling</a></li>
+        <li><a href="#">C++ Graphics</a></li>
+        <li><a href="#">C++ Networking</a></li>
+        <li><a href="#">C++ Data Structures</a></li>
+        <li><a href="#">C++ Templates</a></li>
+        <li><a href="#">C++ File Handling</a></li>
+        <li><a href="#">C++ Standard Template Library (STL)</a></li>
+        <li><a href="#">C++ Smart Pointers</a></li>
+        <li><a href="#">C++ Multithreading</a></li>
+        <li><a href="#">C++ Network Programming</a></li>
+
+	</ul>
+	</div>
+	<div class="right-content">
+        <h2>Introduction to C++ -</h2>
+
+        <p>C++ was developed in the 1980s as an extension of the C programming language. It is an object-oriented programming language, which means that it allows you to create objects that can contain data and methods. C++ is a compiled language, which means that the source code is compiled into machine code before it can be executed.</p>
+		<br><br>
+        <h3>Getting Started -</h3>
+
+        <p>To get started with C++, you will need a text editor and a C++ compiler. You can use any text editor that you are comfortable with, but we recommend using an editor that has syntax highlighting and auto-completion features, such as Visual Studio Code or Sublime Text. For the compiler, we recommend using a free and open-source compiler such as GCC or Clang.</p>
+		<br><br>
+        <p>Let's start with a simple "Hello, World!" example in C++. Open your text editor and create a new file called "hello.cpp". In this file, type the following code:</p>	
+        <br>
+		<h3>Hello World Example -</h3>
+		
+		<pre><code>#include &lt;iostream&gt;
+
+        int main() {
+	        std::cout << "Hello, World!" << std::endl;
+	        return 0;
+            }</code></pre>
+		
+        <p>Save the file and open a command prompt or terminal window. Navigate to the directory where you saved the file and type the following command to compile the code:</p>
+			<ul>
+				<li>g++ hello.cpp -o hello</li>
+			</ul>
+		<p>This will compile the code and create an executable file called "hello". To run the program, type the following command:</p>
+
+        <ul>
+			<li>./hello</li>
+		</ul>
+
+        <p>This will run the program and you should see the message "Hello, World!" printed to the screen.</p>
+		<br>
+        <h3>Data Types -</h3>
+        <p>C++ has several built-in data types, including:</p>
+		<ul>
+			<li>int - for integers</li>
+			<li>float - for floating-point numbers</li>
+			<li>double - for double-precision floating-point numbers</li>
+			<li>char - for characters</li>
+			<li>bool - for Boolean values</li>
+    	</ul>
+        <p>You can declare variables of these data types using the following syntax:</p>
+		<ul>
+			<li>int myInt = 42;</li>
+			<li>float myFloat = 3.14;</li>
+			<li>double myDouble = 3.14159;</li>
+        	<li>char myChar = 'A';</li>
+        	<li>bool myBool = true;</li>
+		</ul>
+	
+        <p>You can also declare arrays of these data types using the following syntax:</p>
+		
+        <pre><code>
+			int myIntArray[5] = {1, 2, 3, 4, 5};
+			float myFloatArray[3] = {1.0, 2.0, 3.0};
+			char myCharArray[6] = {'H', 'e', 'l', 'l', 'o', '0'};</code></pre>
+			
+        <h3>Examples:</h3>
+		
+        <ul>
+            <li><code>Hello World</code> program:</li>
+            <pre><code class="language-cpp">
+        #include &lt;iostream&gt;
+    
+        int main() {
+        std::cout &lt;&lt; "Hello World!" &lt;&lt; std::endl;
+        return 0;
+    }
+            </code></pre>
+            <li>Program to calculate the sum of two numbers:</li>
+            <pre><code class="language-cpp">
+    		#include &lt;iostream&gt;
+    
+				int main() {
+					int num1 = 10;
+					int num2 = 20;
+					int sum = num1 + num2;
+					std::cout &lt;&lt; "The sum of " &lt;&lt;
+					 num1 &lt;&lt; " and " &lt;&lt; num2 &lt;
+					 &lt; " is " &lt;&lt; sum &lt;&lt; std::endl;
+					return 0;
+				}
+            </code></pre>
+        </ul>
+        <button class="scroll-up-button" onclick="scrollToTop()"></button>
+    </div>
+    
+</main>
+<script src="c+js.js"></script>
+</body>
+</html>
+
+
+
+    

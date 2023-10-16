@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> C++ Tutorial </title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+	<a href="home.html">
+	<img src="logo.jpg" alt="Logo" class="logo" width="125" height="40">
+	</a>
+	<div class="search-container">
+		<form action="/search">
+			<label for="search-input"> </label>
+			<input type="text" id="search-input" name="q" placeholder="Search..." onkeypress="handleKeyPress(event)">
+			<button type="button" class="search-button" onclick="searchSiteOrGoogle()"><span class="skew-fix">Search</span></button>
+		</form>
+	</div>
+</header>
+	
+<nav>
+	<ul class="menu cf">
+		<li><a href="home.html">Home</a></li>
+		<li><a href="c++ array.html">Arrays</a></li>
+		<li><a href="home.html">Strings</a></li>
+		<li><a href="c++ functions.html">Functions</a></li>
+		<li><a href="home.html">File Handling</a></li>
+		<li><a href="home.html">Data Structures</a></li>
+		<li><a href="pointers.html">Pointers</a></li>
+		<li><a href="home.html">C++ Programs</a></li>
+	</ul>
+</nav>
+
+<main>
+	<div class="left-content">
+		<h2>Categories</h2>
+		<ul>
+			<li><a href="home.html">C++ Tutorial</a></li>
+			<li><a href="control statement.html">C++ Control Statement</a></li>
+			<li><a href="c++ functions.html">C++ Functions</a></li>
+			<li><a href="c++ array.html">C++ Arrays</a></li>
+			<li><a href="pointers.html">C++ Pointers</a></li>
+			<li><a href="object class.html">C++ Object Class</a></li>
+			<li><a href="c++ inheritance.html">C++ Inheritance</a></li>
+			<li><a href="c++ polymorphism.html">C++ Polymorphism</a></li>
+			<li><a href="#">C++ Abstraction</a></li>
+			<li><a href="#">C++ Strings</a></li>
+			<li><a href="#">Signal Handling</a></li>
+			<li><a href="#">C++ Exception Handling</a></li>
+			<li><a href="#">C++ Templates</a></li>
+			<li><a href="#">C++ Standard Template Library (STL)</a></li>
+			<li><a href="#">C++ Multi-Threading</a></li>
+			<li><a href="#">C++ File Handling</a></li>
+			<li><a href="#">C++ Graphics</a></li>
+			<li><a href="#">C++ Networking</a></li>
+			<li><a href="#">C++ Data Structures</a></li>
+			<li><a href="#">C++ Templates</a></li>
+			<li><a href="#">C++ File Handling</a></li>
+			<li><a href="#">C++ Smart Pointers</a></li>
+			<li><a href="#">C++ Multithreading</a></li>
+			<li><a href="#">C++ Network Programming</a></li>
+	
+	</ul>
+	</div>
+	<div class="right-content">
+            <h2>How to Install and Run C++ on Your Computer -</h2>
+            <p>
+              C++ is a powerful programming language that can be used to create a wide range of applications, from simple console programs to complex graphical user interfaces. In order to get started with C++, you'll need to install a C++ compiler on your computer. Here's how to do it:
+            </p>
+			<br> <br>
+            <h3>Step 1: Choose a C++ Compiler -</h3>
+			
+            <p>
+              There are several C++ compilers available, both free and commercial. Some popular options include:
+              <ul>
+                <li>Visual Studio (Windows)</li>
+                <li>Xcode (Mac)</li>
+                <li>g++ (Linux)</li>
+              </ul>
+              Choose the compiler that best fits your needs and download it from the official website.
+            </p>
+			<br> <br>
+            <h3>Step 2: Install the Compiler -</h3>
+			
+            <p>
+              Once you've downloaded the compiler, follow the installation instructions provided by the compiler vendor. This may involve running an installer program or simply extracting the files from a downloaded archive.
+            </p>
+			<br> <br>
+            <h3>Step 3: Create a C++ Project -</h3>
+		
+            <p>
+              After you've installed the compiler, you can create a new C++ project using the integrated development environment (IDE) provided by the compiler. This will typically involve selecting "New Project" from the IDE's File menu and choosing a C++ project template.
+            </p>
+			<br> <br>
+            <h3>Step 4: Write and Run Your Code -</h3>
+			<hr>
+            <p>
+              With your project set up, you can start writing your C++ code using the IDE's editor. Once you've written your code, you can compile it by selecting "Build" from the IDE's Build menu. If there are no errors, you can run your program by selecting "Run" from the IDE's Debug menu.
+            </p>
+            <p>
+              Congratulations, you've now installed and run C++ on your computer! From here, you can continue learning the language and creating more complex programs. Here's an example of a C++ program to print Hello World:
+            </p>
+			<br> <br>
+            <h3>Example: Printing Hello World -</h3>
+            <pre><code class="language-cpp">
+            #include &lt;iostream&gt;
+            using namespace std;
+
+            int main() 
+        {
+            cout &lt;&lt; "Hello World";
+            return 0;
+        }
+        </code></pre>
+        <br><br>
+        <h3>Example: Basic Arithmetic -</h3>
+        <p>
+            Here's an example of a C++ program to perform basic arithmetic operations:
+        </p>
+        <pre><code class="language-cpp">
+            #include &lt;iostream&gt;
+            using namespace std;
+
+            int main() 
+            {
+                int x = 5;
+                int y = 10;
+    
+                cout &lt;&lt; "x + y = " &lt;&lt; x + y &lt;&lt; endl;
+                cout &lt;&lt; "x - y = " &lt;&lt; x - y &lt;&lt; endl;
+                cout &lt;&lt; "x * y = " &lt;&lt; x * y &lt;&lt; endl;
+                cout &lt;&lt; "x / y = " &lt;&lt; x / y &lt;&lt; endl;
+    
+                return 0;
+            }
+
+    </code></pre>
+            
+        </div>  
+        <button class="scroll-up-button" onclick="scrollToTop()"><span class="skew-fix"></span></button>
+</main>
+
+<script src="c+js.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<html><head>
+	<title>For Loop in Python</title>
+	<link rel="stylesheet" href="stylepython.css">
+	<script src="scriptpython.js"></script>
+	</head>
+	<body>
+		<header>
+		<a href = "home.html" > <img src="logo.jpg" alt="Logo" class="logo"  width="125" height="40"></a>
+		<div class="search-container">
+			<input type="text" id="search-input" name="q" placeholder="Search..."onkeypress="handleKeyPress(event)">
+			<button type="button"  onclick="searchSiteOrGoogle()"><span class="skew-fix">Search</span></button>
+		</div>
+	</header>
+		
+	<nav>
+		<ul class="menu cf">
+			<li><a href="home.html">Home</a></li>
+			<li><a href="arrayp.html">Arrays</a></li>
+			<li><a href="stringsp.html">Strings</a></li>
+			<li><a href="functionsp.html">Functions</a></li>
+			<li><a href="filehandlingp.html">File Handling</a></li>
+			<li><a href="datastructurep.html">Data Structures</a></li>
+			<li><a href="operatorsp.html">Operators in Python</a></li>
+		</ul>
+	</nav>
+	
+	<main>
+		<div class="left-content">
+			<h2>Categories</h2>
+			<ul>
+				<li><a href="introductionp.html">Introduction</a></li>
+				<li><a href="Datatypesp.html">Data Types</a></li>
+				<li><a href="listsp.html">Lists</a></li>
+				<li><a href="arrayp.html">Array</a></li>
+				<li><a href="stringsp.html">Strings</a></li>
+				<li><a href="userinputp.html">User Input in Python</a></li>
+				<li><a href="tuplesp.html">Tuples</a></li>
+				<li><a href="setsp.html">Sets</a></li>
+				<li><a href="dictionariesp.html">Dictionaries</a></li>
+				<li><a href="ifelsep.html">If-Else Statements in Python</a></li>
+				<li><a href="forp.html">For Loops in Python</a></li>
+				<li><a href="whilep.html">While Loops in Python</a></li>
+			</ul>
+		</div>
+	<div class="right-content">
+        
+        <h1>For Loop in Python</h1>
+        <br><br><br>
+        <br><p>A <code>for</code> loop is a control flow statement in Python that allows you to iterate over a sequence of values, such as a list, tuple, string, or dictionary. The general syntax of a <code>for</code> loop in Python is as follows:</p>
+        <ul class="pre"><pre><code>for variable in sequence:
+        # do something
+    </code></pre></ul>
+        <br><p>Here, <code>variable</code> is a variable that will take on each value in the <code>sequence</code> during each iteration of the loop. The indented block of code underneath the <code>for</code> statement is the body of the loop, which is executed once for each value in the sequence.</p>
+        <br><p>For example, let's say we have a list of numbers that we want to iterate over using a <code>for</code> loop:</p>
+        <ul class="pre"><pre><code>numbers = [1, 2, 3, 4, 5]
+    for number in numbers:
+        print(number)
+    </code></pre></ul>
+        <br><p>In this example, we define a list of numbers <code>[1, 2, 3, 4, 5]</code>, and then use a <code>for</code> loop to iterate over the list. During each iteration of the loop, the <code>number</code> variable takes on the value of the current element in the list, and the <code>print</code> function is called to display the value on the screen.</p>
+        <br><p>The <code>range()</code> function is commonly used to create a sequence of numbers to iterate over in a <code>for</code> loop:</p>
+        <ul class="pre"><pre><code>for i in range(1, 6):
+        print(i)
+    </code></pre></ul>
+        <br><p>In this example, we use the <code>range()</code> function to create a sequence of numbers from 1 to 5 (inclusive), and then use a <code>for</code> loop to iterate over the sequence. The <code>i</code> variable takes on the value of each number in the sequence during each iteration of the loop, and the <code>print</code> function is called to display the value on the screen.</p>
+        <br><p>In addition to iterating over sequences, you can also use a <code>for</code> loop to iterate over the keys and values in a dictionary:</p>
+        <ul class="pre"><pre><code>my_dict = {'a': 1, 'b': 2, 'c': 3}
+    for key, value in my_dict.items():
+        print(key, value)
+    </code></pre></ul>
+        <p>In this example, we define a dictionary <code>{'a': 1, 'b': 2, 'c': 3}</code>, and then use a <code>for</code> loop to iterate over the <code>items()</code> in the dictionary. During each iteration of the loop, the <code>key</code> variable takes on the key of the current item in the dictionary, and the <code>value</code> variable takes on the value of the current item. The <code>print</code> function is called to display the output of the current key-value pair on the screen.</p>
+        <br>
+        <p>The <code>for</code> loop is used to iterate over a sequence of values in Python.</p>
+        <br><br><h4>Basic Syntax</h4><br><br>
+        <br><p>The basic syntax of the <code>for</code> loop in Python is:</p><br>
+        <ul class="pre"><pre><code>for variable in sequence:
+        # Code to execute for each value in the sequence</code></pre></ul>
+        <br><p>For example:</p><br>
+        <ul class="pre"><pre><code>fruits = ["apple", "banana", "cherry"]
+    for fruit in fruits:
+        print(fruit)</code></pre></ul>
+        <p>This code will iterate over the values in the <code>fruits</code> list and print each one to the screen.</p>
+        <br><br><h4>Advanced Features</h4><br>
+        <p>There are several advanced features of the <code>for</code> loop in Python:</p>
+        <ul class="pre">
+        <li>You can use the <code>break</code> statement to exit the loop early if a certain condition is met.</li>
+        <li>You can use the <code>continue</code> statement to skip the current iteration of the loop and move on to the next one.</li>
+        <li>You can use the <code>else</code> clause to execute some code after the loop has finished iterating over the sequence.</li>
+        <li>You can use the <code>enumerate()</code> function to iterate over both the values and the indices of a sequence.</li>
+        <li>You can use the <code>zip()</code> function to iterate over multiple sequences in parallel.</li>
+        </ul>
+        <br><p>For example:</p><br>
+        <ul class="pre"><pre><code>for i in range(1, 6):
+        if i == 3:
+            break
+        print(i)</code></pre></ul>
+        <br><p>This code will iterate over the numbers 1 to 5, but when <code>i</code> is equal to 3, the <code>break</code> statement will be executed and the loop will exit early.</p><br>
+        <ul class="pre"><pre><code>for i in range(1, 6):
+        if i == 3:
+            continue
+        print(i)</code></pre></ul>
+        <br><p>This code will iterate over the numbers 1 to 5, but when <code>i</code> is equal to 3, the <code>continue</code> statement will be executed and the loop will skip over that iteration.</p><br>
+        <ul class="pre"><pre><code>fruits = ["apple", "banana", "cherry"]
+    for i, fruit in enumerate(fruits):
+        print(i, fruit)</code></pre></ul>
+        <br><p>This code uses the <code>enumerate()</code> function to iterate over the <code>fruits</code> list and print both the index and the value of each element to the screen.</p><br>
+        <ul class="pre"><pre><code>names = ["Alice", "Bob", "Charlie"]
+    ages = [25, 30, 35]
+    for name, age in zip(names, ages):
+        print(name, age)</code></pre></ul>
+        <br><p>This code uses the <code>zip()</code> function to iterate over both the <code>names</code> and <code>ages</code> lists in
+    parallel and print out each person's name and age.</p><br>
+
+
+	</div>
+</main>
+</body></html>
